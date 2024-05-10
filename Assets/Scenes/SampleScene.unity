@@ -268,7 +268,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.23, y: 0.12, z: -1}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 519420032}
@@ -288,13 +288,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackL: []
   attackLU: []
-  attackU: []
+  attackU:
+  - {fileID: 11400000, guid: b0d2c39c5af5d9f4fab3bffcd639241b, type: 2}
+  - {fileID: 11400000, guid: b0d2c39c5af5d9f4fab3bffcd639241b, type: 2}
   attackUR: []
   attackR: []
   attackLRD: []
   attackD:
   - {fileID: 11400000, guid: fff8b7cd50e16b842a3d10bd15d5cbec, type: 2}
-  - {fileID: 11400000, guid: b0d2c39c5af5d9f4fab3bffcd639241b, type: 2}
+  - {fileID: 11400000, guid: fff8b7cd50e16b842a3d10bd15d5cbec, type: 2}
   attackDL: []
 --- !u!1 &519420028
 GameObject:
