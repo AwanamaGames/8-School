@@ -91,7 +91,7 @@ public class PlayerCombat : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)){
             newAngle = 0;
         };
-        if (Input.GetKeyDown(KeyCode.CapsLock)){
+        if (Input.GetKeyDown(KeyCode.Q)){
             newAngle = 180;
         }
     }

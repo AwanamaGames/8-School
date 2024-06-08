@@ -51,6 +51,16 @@ public class ItemPickUp : MonoBehaviour
                 return new AirSuci();
             case Items.ObatMerah:
                 return new ObatMerah();
+
+            #region New Items
+            case Items.MovSpeedDuration:
+                return new MovSpeedDuration();
+            case Items.IncreaseDef:
+                return new IncreaseDef();
+            case Items.DoubleLeaf:
+                return new DoubleLeaf();
+            #endregion
+
             default:
                 return new AirSuci();
         }
@@ -61,5 +71,8 @@ public enum Items
 {
     ObatMerah,
     AirSuci,
+    MovSpeedDuration,
+    IncreaseDef,
+    DoubleLeaf
 
 }

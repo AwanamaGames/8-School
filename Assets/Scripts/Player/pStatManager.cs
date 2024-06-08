@@ -9,6 +9,7 @@ public class pStatManager : MonoBehaviour
     public StatSO stat;
 
     public List<ItemList> items = new List<ItemList>();
+    public bool isDoubleLeafActive = false; // Flag to check if double leaf effect is active. used for "double leaf" item
 
 
     async void Start()
@@ -52,6 +53,13 @@ public class pStatManager : MonoBehaviour
         {
             i.item.OnHit(this, hitbox, enemy, i.stacks);
         }
+    }
+
+    // New method to drop the used item
+    // Currently used in new Items
+    public void RemoveItem(Item item)
+    {
+        items.RemoveAll(i => i.item == item);
     }
 
 }
