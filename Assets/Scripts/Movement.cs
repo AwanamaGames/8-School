@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,8 +14,16 @@ public class Movement : MonoBehaviour
    public bool statOK = false;
    Animator animator;
 
+   public Rigidbody2D rb;
+
+   public bool onKnockback = false;
+
+   public Vector2 knockback;
+   Vector2 incomingknock;
+
    async void Start()
    {
+    rb = GetComponent<Rigidbody2D>();
     target = GameObject.FindGameObjectWithTag("Player");
     agent = GetComponent<NavMeshAgent>();
     
@@ -38,7 +48,13 @@ public class Movement : MonoBehaviour
     }
     movAni();
 
+
+    
    }
+  void FixedUpdate()
+  {
+    
+  }
 
    async Task getStat()
    {
@@ -47,6 +63,8 @@ public class Movement : MonoBehaviour
     agent.speed = stat.movSpd;
     statOK = true;
    }
+
+
 
    void rotateTo()
    {
@@ -67,4 +85,9 @@ public class Movement : MonoBehaviour
             animator.SetFloat("y", agent.velocity.y);
         }
   }
+
+
+  
+  
+
 }

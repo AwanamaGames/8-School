@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: statTuyul
   m_EditorClassIdentifier: 
   maxHP: 60
-  currentHP: 60
+  currentHP: 600
   att: 15
   movSpd: 1
   attSpd: 1

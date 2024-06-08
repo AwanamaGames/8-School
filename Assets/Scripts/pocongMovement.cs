@@ -22,19 +22,22 @@ public class pocongMovement : MonoBehaviour
     }
 
     // Update is called once per frame
+    async void Update()
+    {
+        await jumpTrack();
+    }
     async void FixedUpdate()
     {
-        if (GetComponent<StatManager>().stat.isAgro && isCooldown == false){jump();}
-        await jumpTrack();
+        if (GetComponent<StatManager>().stat.isAgro && isCooldown == false){await jump();}
+        
 
     }
 
     async Task jump()
     {   
-        isCooldown = true;
         animator.Play("test");
         agent.SetDestination(player.transform.position);
-        isCooldown =  true;
+
 
     }
 
@@ -48,4 +51,6 @@ public class pocongMovement : MonoBehaviour
             isCooldown = false;
         }
     }
+
+
 }

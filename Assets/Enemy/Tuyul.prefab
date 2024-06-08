@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 1486748202472343975}
   - component: {fileID: 4732388209257563388}
   - component: {fileID: 343242854073781224}
+  - component: {fileID: 1966529530702448583}
   m_Layer: 0
   m_Name: Tuyul
   m_TagString: Enemy
@@ -268,6 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originStat: {fileID: 11400000, guid: 973896ca99ce97c4e898173870a742a9, type: 2}
   stat: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!212 &1651775849579970088
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -333,6 +335,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statOK: 1
+  rb: {fileID: 0}
+  onKnockback: 0
+  knockback: {x: 0, y: 0}
 --- !u!114 &1486748202472343975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +405,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7043897735675650382}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 1c7707100a15ca84785d0f199a75a0a7, type: 2}
   m_CullingMode: 0
@@ -413,6 +418,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &1966529530702448583
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7043897735675650382}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &8234916219764850389
 GameObject:
   m_ObjectHideFlags: 0
