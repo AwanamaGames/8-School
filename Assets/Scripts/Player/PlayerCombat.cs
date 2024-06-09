@@ -22,14 +22,19 @@ public class PlayerCombat : MonoBehaviour
     public int comboCounter;
 
     float angle;
-    float newAngle;
+    float attackAngle;
     float delayAngle;
     bool togle;
+
+    
 
 
     [SerializeField] bool attackDelay;
     [SerializeField] bool comboDelay;
     Animator animator;
+
+
+    [SerializeField] private Camera cam;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,61 +51,34 @@ public class PlayerCombat : MonoBehaviour
         }
         ExitAttack();
         //MouseAngle();
-        Toggle();
     }
     void MouseAngle(){
-        if(Time.time - delayAngle > 0.5f){
-        angle = Mathf.Atan2 (Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X")) * Mathf.Rad2Deg;
-        if (angle<0) angle += 360;
-        switch (angle){
-                case float i when i >= 0 && i <=23:
-                    newAngle = 0;
-                    break;
-                case float i when i >= 337 && i <= 369:
-                    newAngle = 0;
-                    break;
-                case float i when i > 23 && i < 77:
-                    newAngle = 45;
-                    break;
-                case float i when i >= 77 && i <= 113:
-                    newAngle = 90;
-                    break;
-                case float i when i > 113 && i < 157:
-                    newAngle = 135;
-                    break;
-                case float i when i >= 157 && i <= 203:
-                    newAngle = 180;
-                    break;
-                case float i when i > 203 && i < 247:
-                    newAngle = 225;
-                    break;
-                case float i when i >= 247 && i <= 303:
-                    newAngle = 270;
-                    break;
-                case float i when i > 303 && i < 337:
-                    newAngle = 315;
-                    break;
-            };
-        
-        Debug.Log(newAngle);
-        delayAngle = Time.time;
-        }
+        Vector3 test = cam.ScreenToWorldPoint(Input.mousePosition) - cam.transform.position;
+            
+        float i = Mathf.Atan2 (test.y, test.x) * Mathf.Rad2Deg;
 
-    }
-    void Toggle(){
-        if (Input.GetKeyDown(KeyCode.Space)){
-            newAngle = 0;
-        };
-        if (Input.GetKeyDown(KeyCode.Q)){
-            newAngle = 180;
-        }
+
+        if (i >= 0 && i <=23) {attackAngle = 270;}
+        else if (i >= -23 && i <= 0) {attackAngle = 270;}
+        else if (i > 23 && i < 77) {attackAngle = 315;}
+        else if (i >= 77 && i <= 113) {attackAngle = 0;}
+        else if (i > 113 && i < 157) {attackAngle = 45;}
+        else if (i >= 157 && i <= 180 || i >= -157 && i <= -180) {attackAngle = 90;}
+        else if (i > -157 && i < -113) {attackAngle = 135;}
+        else if (i >= -113 && i <= -77) {attackAngle = 180;}
+        else if (i > -77 && i < -23) {attackAngle = 225;}
+        
+
     }
     async Task Attack(){
         if (comboDelay == false && comboCounter <= attackD.Count){
             CancelInvoke("EndCombo");
 
             if(attackDelay == false){
-                switch(newAngle){
+                MouseAngle();
+
+
+                switch(attackAngle){
                     case 0:
                         animator.runtimeAnimatorController = attackU[comboCounter].animatorOV;
                     break;

@@ -7,6 +7,7 @@ TagManager:
   - GlobalSpeed
   - globaltime
   - Enemy
+  - Interactable
   layers:
   - Default
   - TransparentFX

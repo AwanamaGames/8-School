@@ -24,7 +24,7 @@ public class pocongMovement : MonoBehaviour
     // Update is called once per frame
     async void FixedUpdate()
     {
-        if (GetComponent<StatManager>().stat.isAgro && isCooldown == false){jump();}
+        if (GetComponent<StatManager>().stat.isAgro && isCooldown == false){await jump();}
         await jumpTrack();
 
     }
