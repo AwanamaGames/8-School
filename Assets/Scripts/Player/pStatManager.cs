@@ -6,16 +6,23 @@ using UnityEngine;
 public class pStatManager : MonoBehaviour
 {
     [SerializeField] public StatSO originStat;
+    [SerializeField] FloatingHealthBar healthBar;
     public StatSO stat;
+    public LeafCounter LeafCounter;
 
     public List<ItemList> items = new List<ItemList>();
     public bool isDoubleLeafActive = false; // Flag to check if double leaf effect is active. used for "double leaf" item
 
 
+    private void Awake()
+    {
+        healthBar = GetComponentInChildren<FloatingHealthBar>();
+        LeafCounter = GetComponentInChildren<LeafCounter>();
+    }
+
     async void Start()
     {   
         stat = Instantiate(originStat);
-
 
         StartCoroutine(CallItemUpdate());
         
@@ -23,8 +30,8 @@ public class pStatManager : MonoBehaviour
 
     void Update()
     {
-        
-        
+        healthBar.UpdateHealthBar((float)stat.currentHP, (float)stat.maxHP);
+        LeafCounter.UpdateLeafText(stat.leaf);
     }
 
     IEnumerator CallItemUpdate()
@@ -41,6 +48,7 @@ public class pStatManager : MonoBehaviour
     {
         Debug.Log(damage);
         stat.currentHP -= damage;
+
         if (stat.currentHP <= 0)
         {
             GameObject.Destroy(gameObject);
