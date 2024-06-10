@@ -13,15 +13,15 @@ public class testSave : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButtonDown("Fire1")){
-            Save();
-        }
-        if (Input.GetButtonDown("Fire2")){
-            Load();
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetButtonDown("Fire1")){
+    //        Save();
+    //    }
+    //    if (Input.GetButtonDown("Fire2")){
+    //        Load();
+    //    }
+    //}
 
     public void Save()
     {

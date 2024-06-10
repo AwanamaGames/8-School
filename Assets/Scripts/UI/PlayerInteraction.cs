@@ -5,7 +5,7 @@ public class PlayerInteraction : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI interactPrompt;
     [SerializeField] private PopupManager popupManager;
-    private Interactable currentInteractable;
+    private IInteractable currentInteractable;
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Interactable") && !popupManager.IsPopupActive())
         {
-            currentInteractable = coll.gameObject.GetComponent<Interactable>();
+            currentInteractable = coll.gameObject.GetComponent<IInteractable>();
             if (currentInteractable != null)
             {
                 interactPrompt.gameObject.SetActive(true); // Show the prompt
@@ -39,7 +39,6 @@ public class PlayerInteraction : MonoBehaviour
         if (currentInteractable != null && Input.GetKeyDown(KeyCode.E))
         {
             interactPrompt.gameObject.SetActive(false); // Hide the prompt
-            popupManager.ShowPopup("Interacted with the item!"); // Show the popup
             currentInteractable.Interact();
         }
     }

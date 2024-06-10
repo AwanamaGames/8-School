@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 457172975176835910}
   - component: {fileID: 4305690074251926287}
   - component: {fileID: 2329552810957845736}
-  - component: {fileID: 1928143893192605622}
   m_Layer: 0
   m_Name: InteractTestAirSuci
   m_TagString: Interactable
@@ -144,17 +143,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16.347809, y: 13.014533}
   m_EdgeRadius: 0
---- !u!114 &1928143893192605622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3679227884814463713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d201a64041c830441bd3635676a8d426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDrop: 1
-  price: 0
