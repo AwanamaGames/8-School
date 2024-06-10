@@ -22,14 +22,6 @@ public class hitbox : MonoBehaviour
     async void OnTriggerEnter2D(Collider2D coll){
         if (coll.gameObject.tag == "Enemy")
         {   
-            ///Knockback; 2 is force multiplier, 1000 is duration of knock
-            UnityEngine.Vector2 arah = (coll.gameObject.transform.position - player.transform.position).normalized;
-
-            UnityEngine.Vector2 force = arah * 2;
-
-            await coll.gameObject.GetComponent<StatManager>().Onknockback(force, 1000);
-
-
             ///player attack - enemy def
            totalDamage = player.GetComponent<pStatManager>().stat.att - coll.gameObject.GetComponent<StatManager>().stat.def;
 
@@ -38,6 +30,24 @@ public class hitbox : MonoBehaviour
 
             ///damaging
            coll.gameObject.GetComponent<StatManager>().takeDMG(totalDamage);
+
+            try
+            {
+
+            ///Knockback; 2 is force multiplier, 1000 is duration of knock
+            UnityEngine.Vector2 arah = (coll.gameObject.transform.position - player.transform.position).normalized;
+
+            UnityEngine.Vector2 force = arah * 2;
+
+            await coll.gameObject.GetComponent<StatManager>().Onknockback(force, 1000);
+            }
+            catch
+            {
+                
+            }
+
+
+
 
            
         }

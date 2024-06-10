@@ -742,6 +742,7 @@ MonoBehaviour:
   originStat: {fileID: 11400000, guid: 5250d25f9a8dde84f88ee7edf9fd4964, type: 2}
   healthBar: {fileID: 6804289832781081818}
   stat: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!212 &2316818530107869088
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -783,7 +784,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f66e83efb71357d49b74d8940c89ad20, type: 3}
+  m_Sprite: {fileID: -383022163, guid: c1e48669b2e1d5e47816ce4eec444507, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -822,7 +823,7 @@ MonoBehaviour:
   stat: {fileID: 0}
   player: {fileID: 0}
   animator: {fileID: 0}
-  isCooldown: 0
+  isJumping: 0
   agent: {fileID: 0}
 --- !u!95 &6209701177126054740
 Animator:

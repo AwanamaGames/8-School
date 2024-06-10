@@ -9,7 +9,7 @@ public class pocongMovement : MonoBehaviour
     public StatSO stat;
     public GameObject player;
     public Animator animator;
-    public bool isCooldown = false;
+    public bool isJumping = false;
 
     public NavMeshAgent agent;
     void Start()
@@ -22,30 +22,40 @@ public class pocongMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    async void FixedUpdate()
+    void Update()
     {
-        if (GetComponent<StatManager>().stat.isAgro && isCooldown == false){await jump();}
-        await jumpTrack();
-
+        
+        movAni();
     }
-
-    async Task jump()
-    {   
-        isCooldown = true;
-        animator.Play("test");
-        agent.SetDestination(player.transform.position);
-        isCooldown =  true;
-
-    }
-
-    async Task jumpTrack()
+    void FixedUpdate()
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.9f && animator.GetCurrentAnimatorStateInfo(0).IsTag("test"))
+        if (GetComponent<StatManager>().stat.isAgro && isJumping == false)
         {
-            agent.SetDestination(transform.position);
-            isCooldown = true;
-            await Task.Delay(2000);
-            isCooldown = false;
+            jump();
         }
     }
+
+    void jump()
+    {   
+        agent.SetDestination(player.transform.position);
+        animator.SetBool("isJumping", true);
+
+    }
+
+    void movAni()
+    {
+        if (isJumping == true)
+        {
+            animator.SetFloat("x", agent.velocity.x);
+            animator.SetFloat("y", agent.velocity.y);
+        }
+    }
+
+    void jatuh()
+    {
+        agent.SetDestination(transform.position);
+    }
+
+
+    
 }
