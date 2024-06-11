@@ -27,7 +27,7 @@ public class pocongMovement : MonoBehaviour
     void Update()
     {
         
-        movAni();
+        ///movAni();
     }
     void FixedUpdate()
     {
@@ -39,12 +39,17 @@ public class pocongMovement : MonoBehaviour
         {
             animator.SetBool("isJumping", false);
         }
+        attackTriggerRotateTo();
     }
 
     void jump()
     {   
         agent.SetDestination(player.transform.position);
         animator.SetBool("isJumping", true);
+        Vector2 direction = (player.transform.position - transform.position).normalized;
+        
+        animator.SetFloat("x", direction.x);
+        animator.SetFloat("y", direction.y);
 
     }
 
@@ -52,8 +57,8 @@ public class pocongMovement : MonoBehaviour
     {
         if (isJumping == true)
         {
-            animator.SetFloat("x", agent.velocity.x);
-            animator.SetFloat("y", agent.velocity.y);
+            ///animator.SetFloat("x", agent.velocity.x);
+            ///animator.SetFloat("y", agent.velocity.y);
         }
     }
 
@@ -61,6 +66,16 @@ public class pocongMovement : MonoBehaviour
     {
         agent.SetDestination(transform.position);
     }
+
+    void attackTriggerRotateTo()
+    {
+        float x_distance = player.transform.position.x - transform.position.x;
+        float y_distance = player.transform.position.y - transform.position.y;
+        float angle = Mathf.Atan2(y_distance, x_distance) * Mathf.Rad2Deg;
+        ///if (angle<0) angle += 360;
+        this.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+    }
+
 
 
     
