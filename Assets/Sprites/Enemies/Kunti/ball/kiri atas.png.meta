@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6af76cec0d9c2a44bc6a7681a395dfd
-      internalID: 1159953557
+      spriteID: f9f9e54e3b63ae1438f6fd28f5703363
+      internalID: -1084341736
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbf24d3fad6da6d48bfe0128923e5edb
-      internalID: 1370296236
+      spriteID: 74e56c5ff0a13734999216f1070c929c
+      internalID: -527737079
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5215e5da8f8121488d493851bd80d22
-      internalID: 1725231778
+      spriteID: 9f088d0017ca68d439e3ac13ec2b6c2c
+      internalID: 20695461
       vertices: []
       indices: 
       edges: []
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3defc66a11dc6944aab3627bae19ffea
-      internalID: 729778078
+      spriteID: 84b2ae5e3b0eead41bb39b5c92ad2c9e
+      internalID: 380867775
       vertices: []
       indices: 
       edges: []
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 917aa8acf4f6f3d468cb8ac764a27497
-      internalID: -799910158
+      spriteID: 05ff1b5d054291f4da1a312aca28c85b
+      internalID: -554114011
       vertices: []
       indices: 
       edges: []
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6fb5de2fe9c2d14d8a0691af1510caa
-      internalID: -758056425
+      spriteID: 22d7cadce1a00f14cb1fc3820c9d1f8f
+      internalID: 1542043144
       vertices: []
       indices: 
       edges: []
@@ -237,8 +237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1736615640d41f498996e17cdbd263e
-      internalID: 13561728
+      spriteID: 434379918f8480641bd98f92d01fbdeb
+      internalID: 1176729332
       vertices: []
       indices: 
       edges: []
@@ -258,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b43f0346cc519ee4996b449fc16d8ca8
-      internalID: 718501818
+      spriteID: ea102b487b8aea9419bc9d993bf76614
+      internalID: 493652607
       vertices: []
       indices: 
       edges: []
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18e67fc275cfa7d4e9786d4c2e8d4d19
-      internalID: 715633790
+      spriteID: f9d85bb10d88f834cabfed9c450c1cb8
+      internalID: -398784229
       vertices: []
       indices: 
       edges: []
@@ -300,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ed960ab0e277ca47b4aac4d9b47b620
-      internalID: -155709429
+      spriteID: 5ed8d0bdb2e052f4684cd2c7a5514726
+      internalID: 466721390
       vertices: []
       indices: 
       edges: []
@@ -321,8 +321,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feb0bd383dd4d784d90ce443a3e83bce
-      internalID: -921602829
+      spriteID: 451830577640f25438c9b98249cbf3c5
+      internalID: -862418848
       vertices: []
       indices: 
       edges: []
@@ -342,8 +342,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4de5e8288370f14fb7c24e55f3fc900
-      internalID: -2096598326
+      spriteID: 432501d4b850ae7449346c4c213c9681
+      internalID: -1896672359
       vertices: []
       indices: 
       edges: []
@@ -359,18 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      kiri atas_0: 1159953557
-      kiri atas_1: 1370296236
-      kiri atas_10: -921602829
-      kiri atas_11: -2096598326
-      kiri atas_2: 1725231778
-      kiri atas_3: 729778078
-      kiri atas_4: -799910158
-      kiri atas_5: -758056425
-      kiri atas_6: 13561728
-      kiri atas_7: 718501818
-      kiri atas_8: 715633790
-      kiri atas_9: -155709429
+      kiri atas_0: -1084341736
+      kiri atas_1: -527737079
+      kiri atas_10: -862418848
+      kiri atas_11: -1896672359
+      kiri atas_2: 20695461
+      kiri atas_3: 380867775
+      kiri atas_4: -554114011
+      kiri atas_5: 1542043144
+      kiri atas_6: 1176729332
+      kiri atas_7: 493652607
+      kiri atas_8: -398784229
+      kiri atas_9: 466721390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

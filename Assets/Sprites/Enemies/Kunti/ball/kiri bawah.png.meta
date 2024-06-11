@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9a97e88d829316a418f81399661a31fd
+guid: e5d722fa26b499d499a9f9f1c5cecc71
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kanan_0
+      name: kiri bawah_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 378c15112ab22704eafba1720fc47a77
-      internalID: 1313907363
+      spriteID: 6ba8ce7915ef6af4591f9c4983df6d29
+      internalID: -1161463802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_1
+      name: kiri bawah_1
       rect:
         serializedVersion: 2
         x: 500
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05733163831158042a97ec376058d99a
-      internalID: 482160036
+      spriteID: 7913243f40b46f9429579ba78df33eb7
+      internalID: -1593125915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_2
+      name: kiri bawah_2
       rect:
         serializedVersion: 2
         x: 1000
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31039e2e8170a0b49b3156594585a68d
-      internalID: -1532338298
+      spriteID: e34385dbdad738f4381442c657314ebf
+      internalID: 1460975849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_3
+      name: kiri bawah_3
       rect:
         serializedVersion: 2
         x: 1500
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 714a598d9a2fb8b44b53f9fc092be905
-      internalID: 339212358
+      spriteID: 41afa4e184010ff468d59f86ef233dc2
+      internalID: 1485515884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_4
+      name: kiri bawah_4
       rect:
         serializedVersion: 2
         x: 0
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb23b0efd5ba2814d9d4f7dce1e9964d
-      internalID: 1526531998
+      spriteID: 74ac9a2984c2f4f449efc12dc8a4bfe7
+      internalID: 848489163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_5
+      name: kiri bawah_5
       rect:
         serializedVersion: 2
         x: 500
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23d12fe6108065e4ca9bb661ffb81072
-      internalID: -40070728
+      spriteID: 9217e0db02422bf4089298aa0bf9708b
+      internalID: -1509970099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_6
+      name: kiri bawah_6
       rect:
         serializedVersion: 2
         x: 1000
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ec99e875b210cf4e9389dcbc6fbd2ae
-      internalID: 933152138
+      spriteID: a9296b9d1683e3e45985ed0028509ed9
+      internalID: -605861480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_7
+      name: kiri bawah_7
       rect:
         serializedVersion: 2
         x: 1500
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c85aa2ba8cfec44cb0ed0a2f6f150e2
-      internalID: 1528574200
+      spriteID: 34cb7ff1651c70d4da96e6f93f1e9325
+      internalID: 2082460259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_8
+      name: kiri bawah_8
       rect:
         serializedVersion: 2
         x: 0
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93b973f0bbe92d847a0ec8038995f2cf
-      internalID: -1728717707
+      spriteID: a6c1771e13a553e48997f1552546068b
+      internalID: 539337649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_9
+      name: kiri bawah_9
       rect:
         serializedVersion: 2
         x: 500
@@ -300,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d4ed76f2bcd2f4419e4809261db2d2d
-      internalID: -2040676218
+      spriteID: 1a50cde9a4a9d0e4eb005bf4231ed366
+      internalID: -705757837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_10
+      name: kiri bawah_10
       rect:
         serializedVersion: 2
         x: 1000
@@ -321,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a09f7371c6547144583be4f5e9e6ec3b
-      internalID: -964185495
+      spriteID: f86dcfe072127e642ad77fde05b9275a
+      internalID: -1081093394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_11
+      name: kiri bawah_11
       rect:
         serializedVersion: 2
         x: 1500
@@ -342,8 +342,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78003ef6c48ba134a910ecfe5fae790c
-      internalID: 1606720008
+      spriteID: 50676c98ab1433e419574b096dfa6507
+      internalID: -28521088
       vertices: []
       indices: 
       edges: []
@@ -359,18 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      kanan_0: 1313907363
-      kanan_1: 482160036
-      kanan_10: -964185495
-      kanan_11: 1606720008
-      kanan_2: -1532338298
-      kanan_3: 339212358
-      kanan_4: 1526531998
-      kanan_5: -40070728
-      kanan_6: 933152138
-      kanan_7: 1528574200
-      kanan_8: -1728717707
-      kanan_9: -2040676218
+      kiri bawah_0: -1161463802
+      kiri bawah_1: -1593125915
+      kiri bawah_10: -1081093394
+      kiri bawah_11: -28521088
+      kiri bawah_2: 1460975849
+      kiri bawah_3: 1485515884
+      kiri bawah_4: 848489163
+      kiri bawah_5: -1509970099
+      kiri bawah_6: -605861480
+      kiri bawah_7: 2082460259
+      kiri bawah_8: 539337649
+      kiri bawah_9: -705757837
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

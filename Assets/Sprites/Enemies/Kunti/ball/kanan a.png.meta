@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4427e533ad5ba824aa17226dc0919e30
-      internalID: 1811839808
+      spriteID: 768740a74774fe34683eede68b253c3d
+      internalID: -1043567879
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b489bd07e3cf6b41be5dcc0d8e46482
-      internalID: -820778217
+      spriteID: 3ec6ffb14d781d44d93c46a150e4db7e
+      internalID: -2120636761
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76f207be1b69f3e488bd05184afba342
-      internalID: -885684186
+      spriteID: 9186ef49c39b63c478c21f4233b117c4
+      internalID: -596684023
       vertices: []
       indices: 
       edges: []
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 343a85ca024ae0447bbfb9f9862fe5d3
-      internalID: 1899618132
+      spriteID: 4a1acd950f637cc43b8b16273ef8f580
+      internalID: -241309992
       vertices: []
       indices: 
       edges: []
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40d8cea39edfec245930add23e442d0a
-      internalID: 1108815839
+      spriteID: d95dfeafc892a8a448cd0f3d78ed26b9
+      internalID: 421393398
       vertices: []
       indices: 
       edges: []
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f464f3eaecd4b44ba5d1057113fdf07
-      internalID: 1630205684
+      spriteID: fac5f1a489cbb424cbf4f82a98ba756f
+      internalID: 1174930862
       vertices: []
       indices: 
       edges: []
@@ -237,8 +237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a88eb5bdccfecf242a1331134fa619ad
-      internalID: 760601392
+      spriteID: 17d0bb96ca1383248a38a56e45468f6c
+      internalID: 653891365
       vertices: []
       indices: 
       edges: []
@@ -258,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a3b6fb4d1571ea46a3717518f8486b8
-      internalID: -1977245621
+      spriteID: fda9f3a3080ee184d92bdb90c348c16a
+      internalID: 1874927134
       vertices: []
       indices: 
       edges: []
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65c184ec6659dd443a74b659e5ac9111
-      internalID: -1457435167
+      spriteID: 8dcd524f6d249144caeeb5ce2312dd76
+      internalID: 1940414848
       vertices: []
       indices: 
       edges: []
@@ -300,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94dd983212ba70b4d8bffff4705da53b
-      internalID: -993203598
+      spriteID: 3c6c81753d816d44c8dbf17d4e08fccf
+      internalID: -67575188
       vertices: []
       indices: 
       edges: []
@@ -321,8 +321,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2106a33346b96b49bf2077ff88b51bf
-      internalID: -2046051186
+      spriteID: 87428e187d5a1e6449e26772dac9a47d
+      internalID: -206721914
       vertices: []
       indices: 
       edges: []
@@ -342,8 +342,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f98e1ac9a44a2b4293570a380259136
-      internalID: 800729133
+      spriteID: bd4053631de6d2047b191338d7c4929e
+      internalID: -1401463632
       vertices: []
       indices: 
       edges: []
@@ -359,18 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      kanan a_0: 1811839808
-      kanan a_1: -820778217
-      kanan a_10: -2046051186
-      kanan a_11: 800729133
-      kanan a_2: -885684186
-      kanan a_3: 1899618132
-      kanan a_4: 1108815839
-      kanan a_5: 1630205684
-      kanan a_6: 760601392
-      kanan a_7: -1977245621
-      kanan a_8: -1457435167
-      kanan a_9: -993203598
+      kanan a_0: -1043567879
+      kanan a_1: -2120636761
+      kanan a_10: -206721914
+      kanan a_11: -1401463632
+      kanan a_2: -596684023
+      kanan a_3: -241309992
+      kanan a_4: 421393398
+      kanan a_5: 1174930862
+      kanan a_6: 653891365
+      kanan a_7: 1874927134
+      kanan a_8: 1940414848
+      kanan a_9: -67575188
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

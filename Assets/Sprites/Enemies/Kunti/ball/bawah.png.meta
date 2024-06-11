@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9a97e88d829316a418f81399661a31fd
+guid: c31411757e771fa439a006595485a185
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kanan_0
+      name: bawah_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 378c15112ab22704eafba1720fc47a77
-      internalID: 1313907363
+      spriteID: 497966ab50f272b49ba483abfe4b66a9
+      internalID: 593207499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_1
+      name: bawah_1
       rect:
         serializedVersion: 2
         x: 500
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05733163831158042a97ec376058d99a
-      internalID: 482160036
+      spriteID: ec85a16ee7ea8da4d990286067bcb11a
+      internalID: 1489549447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_2
+      name: bawah_2
       rect:
         serializedVersion: 2
         x: 1000
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31039e2e8170a0b49b3156594585a68d
-      internalID: -1532338298
+      spriteID: deebf321811583341a2f0c5da504fa8b
+      internalID: -1445958122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_3
+      name: bawah_3
       rect:
         serializedVersion: 2
         x: 1500
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 714a598d9a2fb8b44b53f9fc092be905
-      internalID: 339212358
+      spriteID: a4a9478652f28d948a7c657bb84dd69d
+      internalID: 338598268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_4
+      name: bawah_4
       rect:
         serializedVersion: 2
         x: 0
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb23b0efd5ba2814d9d4f7dce1e9964d
-      internalID: 1526531998
+      spriteID: 79558f24308639b44b5eef20b9ee48d7
+      internalID: 968924439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_5
+      name: bawah_5
       rect:
         serializedVersion: 2
         x: 500
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23d12fe6108065e4ca9bb661ffb81072
-      internalID: -40070728
+      spriteID: d449b6d1fc095f142a9af4de0e0361e8
+      internalID: -127831620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_6
+      name: bawah_6
       rect:
         serializedVersion: 2
         x: 1000
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ec99e875b210cf4e9389dcbc6fbd2ae
-      internalID: 933152138
+      spriteID: ed3f5e7ce4446e1438e11791522b4df7
+      internalID: 712195914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_7
+      name: bawah_7
       rect:
         serializedVersion: 2
         x: 1500
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c85aa2ba8cfec44cb0ed0a2f6f150e2
-      internalID: 1528574200
+      spriteID: f8facf9095992554f9652e96b886663a
+      internalID: -390287134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_8
+      name: bawah_8
       rect:
         serializedVersion: 2
         x: 0
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93b973f0bbe92d847a0ec8038995f2cf
-      internalID: -1728717707
+      spriteID: b44c7e67d605c444d98bd0265b27e65f
+      internalID: -1669066034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_9
+      name: bawah_9
       rect:
         serializedVersion: 2
         x: 500
@@ -300,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d4ed76f2bcd2f4419e4809261db2d2d
-      internalID: -2040676218
+      spriteID: 132e46db9399db94798e0c1b291ffe93
+      internalID: 848707861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_10
+      name: bawah_10
       rect:
         serializedVersion: 2
         x: 1000
@@ -321,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a09f7371c6547144583be4f5e9e6ec3b
-      internalID: -964185495
+      spriteID: e7aacb6d490ae7a4ba4ad7ab38a89e96
+      internalID: 277643886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kanan_11
+      name: bawah_11
       rect:
         serializedVersion: 2
         x: 1500
@@ -342,8 +342,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78003ef6c48ba134a910ecfe5fae790c
-      internalID: 1606720008
+      spriteID: 41a4a9c2d78f000499c0788779e6e41d
+      internalID: 487266203
       vertices: []
       indices: 
       edges: []
@@ -359,18 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      kanan_0: 1313907363
-      kanan_1: 482160036
-      kanan_10: -964185495
-      kanan_11: 1606720008
-      kanan_2: -1532338298
-      kanan_3: 339212358
-      kanan_4: 1526531998
-      kanan_5: -40070728
-      kanan_6: 933152138
-      kanan_7: 1528574200
-      kanan_8: -1728717707
-      kanan_9: -2040676218
+      bawah_0: 593207499
+      bawah_1: 1489549447
+      bawah_10: 277643886
+      bawah_11: 487266203
+      bawah_2: -1445958122
+      bawah_3: 338598268
+      bawah_4: 968924439
+      bawah_5: -127831620
+      bawah_6: 712195914
+      bawah_7: -390287134
+      bawah_8: -1669066034
+      bawah_9: 848707861
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

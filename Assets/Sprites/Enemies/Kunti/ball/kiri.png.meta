@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d68be1bff363e8468553d4363aead48
-      internalID: 914985184
+      spriteID: b4d841b218c53e547bd7008bd2e9ed0e
+      internalID: 363132512
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3424e60ff3fca114697a8ba667b8c048
-      internalID: 1406860000
+      spriteID: 1f6dcdc89c658d747a7747548c78c33b
+      internalID: -43087569
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 154378f01d7844b4b951d4c916a0cba6
-      internalID: 596502138
+      spriteID: 252073f63bd726f489b6b63b17ee1266
+      internalID: -1568876856
       vertices: []
       indices: 
       edges: []
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 481788ee585c7434ea5187695e5e5b09
-      internalID: 942305106
+      spriteID: 92aeb004ff26f8440880f8b4fa1f26e6
+      internalID: 130577621
       vertices: []
       indices: 
       edges: []
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99e30090bdb2603499c4012e20a5a910
-      internalID: 242833809
+      spriteID: c0b4cdaab3659fd4c973f73c6cb43157
+      internalID: -1635607939
       vertices: []
       indices: 
       edges: []
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45f0fb00a9212a14b9cf9b0c35581cfe
-      internalID: 436702442
+      spriteID: ee2b475278278ae47a55113a16612b91
+      internalID: -846517421
       vertices: []
       indices: 
       edges: []
@@ -237,8 +237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaeda2c9c78a7ea42bee958b3e767284
-      internalID: 164086407
+      spriteID: 0e0a8fde59be9784caae1a574aa53a7e
+      internalID: 1049356189
       vertices: []
       indices: 
       edges: []
@@ -258,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 052744706a4f10c49b4d1c0948326077
-      internalID: 796599007
+      spriteID: 54bd70e6859422d4ea33cf6decb29116
+      internalID: 2003388641
       vertices: []
       indices: 
       edges: []
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0646b708bb084cf48b42ae2b36d57482
-      internalID: -1850858856
+      spriteID: 461a37be64efb834f8bca3d662ba172f
+      internalID: -1717283129
       vertices: []
       indices: 
       edges: []
@@ -300,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f27b115114d5ac64787505f1437fc879
-      internalID: 147743789
+      spriteID: ebf9dc797efa99846b41181222e3ab71
+      internalID: 902652573
       vertices: []
       indices: 
       edges: []
@@ -321,8 +321,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0b3983e2f57f3f42a7647c8e5e9384b
-      internalID: 588539233
+      spriteID: efb0b1545423b46468c010bf817a5728
+      internalID: 1876191701
       vertices: []
       indices: 
       edges: []
@@ -342,8 +342,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0237e38bca5050448d3858dc7f59d18
-      internalID: 806579201
+      spriteID: 33c34614911584d4a8f01d2d7f7d2311
+      internalID: -16792837
       vertices: []
       indices: 
       edges: []
@@ -359,18 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      kiri_0: 914985184
-      kiri_1: 1406860000
-      kiri_10: 588539233
-      kiri_11: 806579201
-      kiri_2: 596502138
-      kiri_3: 942305106
-      kiri_4: 242833809
-      kiri_5: 436702442
-      kiri_6: 164086407
-      kiri_7: 796599007
-      kiri_8: -1850858856
-      kiri_9: 147743789
+      kiri_0: 363132512
+      kiri_1: -43087569
+      kiri_10: 1876191701
+      kiri_11: -16792837
+      kiri_2: -1568876856
+      kiri_3: 130577621
+      kiri_4: -1635607939
+      kiri_5: -846517421
+      kiri_6: 1049356189
+      kiri_7: 2003388641
+      kiri_8: -1717283129
+      kiri_9: 902652573
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

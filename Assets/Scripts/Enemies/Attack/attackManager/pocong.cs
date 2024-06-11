@@ -5,22 +5,38 @@ using UnityEngine;
 public class pocongAttackManager : MonoBehaviour, IAttack
 {
     public bool agro = false;
-
+    Animator animator;
+    GameObject player;
+    public bool isAttacking;
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
     void update(){
-        ///if agro && inScan
     }
 
     void attack(){
-        Debug.Log("testt");
+        Vector2 direction = (player.transform.position - transform.position).normalized;
+        
+        animator.SetFloat("x", direction.x);
+        animator.SetFloat("y", direction.y);
+        animator.Play("Attack");
     }
 
     void jumpAttack()
     {
-        ///stop moving
-        ///switch case ke 8 arah menurut roration dari scan, play attack ke arah itu
     }
     public void triggered()
     {
+        if (isAttacking == false)
+        {
         attack();
+        }
+    }
+
+    void animationEventEndAttacking()
+    {
+        animator.Play("Idle");
     }
 }

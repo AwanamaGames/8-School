@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
     Animator animator;
 
     StatManager statManager;
+    
+    public bool isAttacking;
 
     async void Start()
     {
@@ -38,17 +40,23 @@ public class Movement : MonoBehaviour
         try
         {
             #region Original Code
-            if (statManager.isAgro == true)
+            if (statManager.isAgro == true && isAttacking == false)
             {
                 agent.SetDestination(target.transform.position);
             }
-            movAni();
+            
             #endregion 
         }
         catch (NullReferenceException)
         {
 
         }
+        movAni();
+    }
+
+    void Stop()
+    {
+        agent.SetDestination(transform.position);
     }
 
     async Task getStat()
