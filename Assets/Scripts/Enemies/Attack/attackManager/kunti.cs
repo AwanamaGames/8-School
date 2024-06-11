@@ -12,17 +12,20 @@ public class kuntiAttackManager : MonoBehaviour, IAttack
     private int index = 0;
     private bool rangeAttackIsCooldown = false;
     private bool meleeAttakIsCooldown = false;
+    StatManager statManager;
     
     async void Start()
-    {
-        await getStat();
+    {   
+        statManager = GetComponent<StatManager>();
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
+        await getStat();
+        
     }
 
     void Update()
     {
-        if (GetComponent<StatManager>().stat.isAgro == true && agent.velocity.x == 0 && agent.velocity.y == 0 && rangeAttackIsCooldown == false)
+        if (statManager.isAgro == true && agent.velocity.x == 0 && agent.velocity.y == 0 && rangeAttackIsCooldown == false)
         {
             rangeAttack();
         }

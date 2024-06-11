@@ -708,6 +708,9 @@ MonoBehaviour:
   originStat: {fileID: 11400000, guid: f71a700596e42904aa86131e62728a92, type: 2}
   healthBar: {fileID: 7217060371766230441}
   stat: {fileID: 0}
+  rb: {fileID: 0}
+  isAgro: 0
+  inRange: 0
 --- !u!114 &7627508356615511278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,7 +723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf57f8a58a248b4a8a6cf1163fdaa8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statOK: 1
 --- !u!212 &7004145170633083424
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -762,7 +764,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 04fd836f7d43d424d84876021b2f0c45, type: 3}
+  m_Sprite: {fileID: 1184818914, guid: 0b6f68311ea633642a3cd9c4f116411a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -772,7 +774,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &5774895680918212174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,7 +824,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.013818234}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.28}
     oldSize: {x: 2.2222223, y: 2.2222223}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5

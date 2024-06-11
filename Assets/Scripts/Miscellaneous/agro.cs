@@ -22,7 +22,7 @@ public class agroManager : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll){
         if (coll.gameObject.tag == "Player")
         {
-           stat.isAgro = true;
+           statManager.isAgro = true;
         }
     }
 

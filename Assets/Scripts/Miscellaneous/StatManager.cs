@@ -13,6 +13,10 @@ public class StatManager : MonoBehaviour
     public Rigidbody2D rb;
 
 
+    public bool isAgro;
+    public bool inRange;
+
+
     private void Awake()
     {
         healthBar = GetComponentInChildren<FloatingHealthBar>();

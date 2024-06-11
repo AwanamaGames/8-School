@@ -10,8 +10,9 @@ public class Movement : MonoBehaviour
     NavMeshAgent agent;
     StatSO stat;
     GameObject target;
-    public bool statOK = false;
     Animator animator;
+
+    StatManager statManager;
 
     async void Start()
     {
@@ -22,6 +23,7 @@ public class Movement : MonoBehaviour
         agent.updateUpAxis = false;
 
         animator = GetComponent<Animator>();
+        statManager = GetComponent<StatManager>();
 
 
         await getStat();
@@ -36,7 +38,7 @@ public class Movement : MonoBehaviour
         try
         {
             #region Original Code
-            if (stat.isAgro == true)
+            if (statManager.isAgro == true)
             {
                 agent.SetDestination(target.transform.position);
             }
@@ -54,7 +56,6 @@ public class Movement : MonoBehaviour
         await Task.Delay(1);
         stat = GetComponent<StatManager>().stat;
         agent.speed = stat.movSpd;
-        statOK = true;
     }
 
     void rotateTo()

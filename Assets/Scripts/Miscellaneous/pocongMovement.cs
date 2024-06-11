@@ -10,11 +10,13 @@ public class pocongMovement : MonoBehaviour
     public GameObject player;
     public Animator animator;
     public bool isJumping = false;
+    StatManager statManager;
 
     public NavMeshAgent agent;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        statManager = GetComponent<StatManager>();
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -29,9 +31,13 @@ public class pocongMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (GetComponent<StatManager>().stat.isAgro && isJumping == false)
+        if (statManager.isAgro && isJumping == false && statManager.inRange == false)
         {
             jump();
+        }
+        if (isJumping == false && statManager.inRange == true)
+        {
+            animator.SetBool("isJumping", false);
         }
     }
 
