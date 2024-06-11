@@ -1,18 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
+using System.Collections;
 
 public class pStatManager : MonoBehaviour
 {
-    [SerializeField] public StatSO originStat;
     [SerializeField] FloatingHealthBar healthBar;
     public StatSO stat;
     public LeafCounter LeafCounter;
 
     public List<ItemList> items = new List<ItemList>();
-    public bool isDoubleLeafActive = false; // Flag to check if double leaf effect is active. used for "double leaf" item
-
+    public bool isDoubleLeafActive = false;
 
     private void Awake()
     {
@@ -21,11 +18,10 @@ public class pStatManager : MonoBehaviour
     }
 
     async void Start()
-    {   
-        stat = Instantiate(originStat);
+    {
+        stat = GameManager.Instance.gameplaySO;
 
         StartCoroutine(CallItemUpdate());
-        
     }
 
     void Update()
@@ -51,6 +47,7 @@ public class pStatManager : MonoBehaviour
 
         if (stat.currentHP <= 0)
         {
+            GameManager.Instance.ChangeState(GameState.GameLose);
             GameObject.Destroy(gameObject);
         }
     }
@@ -63,11 +60,8 @@ public class pStatManager : MonoBehaviour
         }
     }
 
-    // New method to drop the used item
-    // Currently used in new Items
     public void RemoveItem(Item item)
     {
         items.RemoveAll(i => i.item == item);
     }
-
 }
