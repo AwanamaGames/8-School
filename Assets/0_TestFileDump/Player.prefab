@@ -1068,7 +1068,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 2.3202024}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1079,7 +1079,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3}
+  m_Size: {x: 0.14770257, y: 0.58623576}
   m_EdgeRadius: 0
 --- !u!1 &3086063403532120717
 GameObject:
@@ -1694,6 +1694,73 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &4509200020202561694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8429284061935766369}
+  - component: {fileID: 3085752238794900617}
+  m_Layer: 0
+  m_Name: HurtBox
+  m_TagString: PlayerHurtBox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8429284061935766369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4509200020202561694}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6422184798878233036}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &3085752238794900617
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4509200020202561694}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000000011680781, y: -0.00979855}
+  m_Size: {x: 0.3305653, y: 0.14214207}
+  m_Direction: 1
 --- !u!1 &5203307187631313417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,12 +1793,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5203307187631313417}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.64, y: -20.23, z: -0.50325596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4491118025970805796}
+  - {fileID: 8429284061935766369}
   - {fileID: 5403513455125797804}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1749,7 +1817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 8909505906678285071}
   stat: {fileID: 0}
-  LeafCounter: {fileID: 0}
+  LeafCounter: {fileID: 6890479240561428778}
   items: []
   isDoubleLeafActive: 0
 --- !u!50 &9191837764114053906
@@ -1820,7 +1888,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e7369e12560c6f24ba02a7fbe56d8c49, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9aaa93a7a4522649bbe426c8123a2e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1878,18 +1946,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1642f9995737ddf4dae2741b518379d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackL: []
-  attackLU: []
+  attackL:
+  - {fileID: 11400000, guid: 04a77a6589d174249b69b3d6b69ca9af, type: 2}
+  - {fileID: 11400000, guid: b89b128a88828bb42bb29441307f6775, type: 2}
+  - {fileID: 11400000, guid: 16becb69ed4d2d9479aaacae96f390cd, type: 2}
+  attackLU:
+  - {fileID: 11400000, guid: 459d0b380f2cdba4683f3e27c3fa9c9a, type: 2}
+  - {fileID: 11400000, guid: d81afef5c1f653644a0258fb1a194415, type: 2}
+  - {fileID: 11400000, guid: 59d47b155d59ec5499419bbb30ebc9f2, type: 2}
   attackU:
-  - {fileID: 11400000, guid: b0d2c39c5af5d9f4fab3bffcd639241b, type: 2}
-  - {fileID: 11400000, guid: b0d2c39c5af5d9f4fab3bffcd639241b, type: 2}
-  attackUR: []
-  attackR: []
-  attackLRD: []
+  - {fileID: 11400000, guid: 45e7487ab71fd004b8442710021be8ed, type: 2}
+  - {fileID: 11400000, guid: 783162f1afbc29740bb4a36563ba313b, type: 2}
+  - {fileID: 11400000, guid: 6deb0ebcf9308d24c91ce901bd386697, type: 2}
+  attackRU:
+  - {fileID: 11400000, guid: d1c1c652582b37c45bea0752d5d0cf7e, type: 2}
+  - {fileID: 11400000, guid: d747033d59da1304bb90cb154ca33f7c, type: 2}
+  - {fileID: 11400000, guid: 52a4d731502d6d4469a9a1cbaa967100, type: 2}
+  attackR:
+  - {fileID: 11400000, guid: db6739c373bef484899b1517ccb2a249, type: 2}
+  - {fileID: 11400000, guid: 9720427d7138fa94e8c1029a429b116d, type: 2}
+  - {fileID: 11400000, guid: 156fed3bbac02224ab0a3f40a79cabc1, type: 2}
+  attackRD:
+  - {fileID: 11400000, guid: cd7ebbc26d395cc409c6f4fedfe3499f, type: 2}
+  - {fileID: 11400000, guid: 432b4755687df2a44afecc9ac4d39ed2, type: 2}
+  - {fileID: 11400000, guid: 36f5efcfba4ca054c9deecb263908b2d, type: 2}
   attackD:
-  - {fileID: 11400000, guid: fff8b7cd50e16b842a3d10bd15d5cbec, type: 2}
-  - {fileID: 11400000, guid: fff8b7cd50e16b842a3d10bd15d5cbec, type: 2}
-  attackDL: []
+  - {fileID: 11400000, guid: cf04fbc1145d4be40a9a5d6ecf77c776, type: 2}
+  - {fileID: 11400000, guid: 561ec1cb6f262df459e484573825e561, type: 2}
+  - {fileID: 11400000, guid: 6724af4cfca86a740aa03173623c6dff, type: 2}
+  attackLD:
+  - {fileID: 11400000, guid: 5a8a213a2e930e047bf232e574bdeefe, type: 2}
+  - {fileID: 11400000, guid: 9a1408a09c7535e4ea5e6ec05a7afcc3, type: 2}
+  - {fileID: 11400000, guid: ab091a787f0ab2742a148c269f9fa1e7, type: 2}
   comboCounter: 0
   attackDelay: 0
   comboDelay: 0
@@ -1926,11 +2014,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.44}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.2, y: 1.8}
+    pivot: {x: 0.5, y: 0.28}
+    oldSize: {x: 2.2222223, y: 2.2222223}
     newSize: {x: 3.2, y: 1.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1971,11 +2059,11 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.256037}
+  m_Offset: {x: 0, y: 0.64}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.2, y: 1.8}
+    pivot: {x: 0.5, y: 0.28}
+    oldSize: {x: 2.2222223, y: 2.2222223}
     newSize: {x: 3.2, y: 1.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

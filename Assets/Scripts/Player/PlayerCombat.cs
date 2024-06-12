@@ -11,11 +11,11 @@ public class PlayerCombat : MonoBehaviour
     public List<attackSO> attackL;
     public List<attackSO> attackLU;
     public List<attackSO> attackU;
-    public List<attackSO> attackUR;
+    public List<attackSO> attackRU;
     public List<attackSO> attackR;
-    public List<attackSO> attackLRD;
+    public List<attackSO> attackRD;
     public List<attackSO> attackD;
-    public List<attackSO> attackDL;
+    public List<attackSO> attackLD;
 
     float lastClickedTime;
     float lastComboEnd;
@@ -47,7 +47,7 @@ public class PlayerCombat : MonoBehaviour
     async void Update()
     {
         if (Input.GetButtonDown("Fire1")){
-            await Attack();
+            Attack();
         }
         ExitAttack();
         //MouseAngle();
@@ -58,48 +58,80 @@ public class PlayerCombat : MonoBehaviour
         float i = Mathf.Atan2 (test.y, test.x) * Mathf.Rad2Deg;
 
 
-        if (i >= 0 && i <=23) {attackAngle = 270;}
-        else if (i >= -23 && i <= 0) {attackAngle = 270;}
-        else if (i > 23 && i < 77) {attackAngle = 315;}
-        else if (i >= 77 && i <= 113) {attackAngle = 0;}
-        else if (i > 113 && i < 157) {attackAngle = 45;}
-        else if (i >= 157 && i <= 180 || i >= -157 && i <= -180) {attackAngle = 90;}
-        else if (i > -157 && i < -113) {attackAngle = 135;}
-        else if (i >= -113 && i <= -77) {attackAngle = 180;}
-        else if (i > -77 && i < -23) {attackAngle = 225;}
+        if (i >= 0 && i <=23) {attackAngle = 1;}
+        else if (i >= -23 && i <= 0) {attackAngle = 1;}
+        else if (i > 23 && i < 77) {attackAngle = 2;}
+        else if (i >= 77 && i <= 113) {attackAngle = 3;}
+        else if (i > 113 && i < 157) {attackAngle = 4;}
+        else if (i >= 157 && i <= 180 || i >= -157 && i <= -180) {attackAngle = 5;}
+        else if (i > -157 && i < -113) {attackAngle = 6;}
+        else if (i >= -113 && i <= -77) {attackAngle = 7;}
+        else if (i > -77 && i < -23) {attackAngle = 8;}
         
 
     }
-    async Task Attack(){
+    void Attack(){
         if (comboDelay == false && comboCounter <= attackD.Count){
-            CancelInvoke("EndCombo");
+            CancelInvoke("newEndCombo");
 
             if(attackDelay == false){
                 MouseAngle();
 
 
                 switch(attackAngle){
-                    case 0:
-                        animator.runtimeAnimatorController = attackU[comboCounter].animatorOV;
+                    case 1:
+                        animator.runtimeAnimatorController = attackR[comboCounter].animatorOV;
+                        animator.SetFloat("Horizontal", 1);
+                        animator.SetFloat("Vertical", 0);
                     break;
                     
-                    case 180:
+                    case 2:
+                        animator.runtimeAnimatorController = attackRU[comboCounter].animatorOV;
+                        animator.SetFloat("Horizontal", 1);
+                        animator.SetFloat("Vertical", 1);
+                    break;
+                    case 3:
+                        animator.runtimeAnimatorController = attackU[comboCounter].animatorOV;
+                        animator.SetFloat("Horizontal", 0);
+                        animator.SetFloat("Vertical", 1);
+                    break;
+                    case 4:
+                        animator.runtimeAnimatorController = attackLU[comboCounter].animatorOV;
+                        animator.SetFloat("Horizontal", -1);
+                        animator.SetFloat("Vertical", 1);
+                    break;
+                    case 5:
+                        animator.runtimeAnimatorController = attackL[comboCounter].animatorOV;
+                        animator.SetFloat("Horizontal", -1);
+                        animator.SetFloat("Vertical", 0);
+                    break;
+                    case 6:
+                        animator.runtimeAnimatorController = attackLD[comboCounter].animatorOV;
+                        animator.SetFloat("Horizontal", -1);
+                        animator.SetFloat("Vertical", -1);
+                    break;
+                    case 7:
                         animator.runtimeAnimatorController = attackD[comboCounter].animatorOV;
+                        animator.SetFloat("Horizontal", 0);
+                        animator.SetFloat("Vertical", -1);
+                    break;
+                    case 8:
+                        animator.runtimeAnimatorController = attackRD[comboCounter].animatorOV;
+                        animator.SetFloat("Horizontal", 1);
+                        animator.SetFloat("Vertical", -1);
                     break;
                     
                 }
 
                 animator.Play("Attack");
-                await EndAttack();
+                comboCounter++; 
+                ///await EndAttack();
                 
                 ///Debug.Log("attack");
 
                 if (comboCounter >= attackD.Count){
-                    
-                    comboDelay = true;
-                    await Task.Delay(3000);
                     comboCounter = 0;
-                    comboDelay = false;
+                    
 
 
                     ///Debug.Log("combo");
@@ -110,8 +142,13 @@ public class PlayerCombat : MonoBehaviour
 
     void ExitAttack(){
         if(animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.9f && animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")){
-            Invoke("EndCombo", 1);
+            Invoke("newEndCombo", 1);
         }
+    }
+
+    void newEndCombo()
+    {
+        comboCounter = 0;
     }
 
     async Task EndCombo()

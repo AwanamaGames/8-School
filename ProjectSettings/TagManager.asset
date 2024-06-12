@@ -8,6 +8,7 @@ TagManager:
   - globaltime
   - Enemy
   - Interactable
+  - PlayerHurtBox
   layers:
   - Default
   - TransparentFX

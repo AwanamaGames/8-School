@@ -544,6 +544,9 @@ MonoBehaviour:
   originStat: {fileID: 11400000, guid: 973896ca99ce97c4e898173870a742a9, type: 2}
   healthBar: {fileID: 7767738471399064353}
   stat: {fileID: 0}
+  rb: {fileID: 0}
+  isAgro: 0
+  inRange: 0
 --- !u!212 &1651775849579970088
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -608,7 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf57f8a58a248b4a8a6cf1163fdaa8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statOK: 1
+  isAttacking: 0
 --- !u!114 &1486748202472343975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,7 +822,7 @@ Transform:
   m_GameObject: {fileID: 8234916219764850389}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.03, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
