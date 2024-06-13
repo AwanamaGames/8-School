@@ -1,72 +1,182 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using Cinemachine;
 
 public class Dialogue : MonoBehaviour
 {
-    public TextMeshProUGUI textComponent;
-    public string[] lines;
-    public float textSpeed;
+    // UI References
+    [SerializeField] private GameObject dialogueCanvas;
+    [SerializeField] private TMP_Text speakerText;
+    [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private Image portraitImage;
 
-    private int index;
-    private bool isTyping;
+    // Reference to Gameplay UI Canvas to Hide during Dialogue
+    [SerializeField] private GameObject gameplayUICanvas;
 
-    // Start is called before the first frame update
-    void Start()
+    // Dialogue Content
+    [SerializeField] private string[] speaker;
+    [SerializeField][TextArea] private string[] dialogueSentences; // Each sentence will be displayed letter by letter
+    [SerializeField] private Sprite[] portrait;
+
+    // Cinematic Bar Reference
+    [SerializeField] private CinematicBar cinematicBar;
+    [SerializeField] private float cinematicBarSize = 600f;
+    [SerializeField] private float transitionTime = .3f;
+
+    // Player Reference
+    [SerializeField] private GameObject player;
+    private Rigidbody2D playerRigidbody;
+    private PlayerMovement playerMovement;
+    private Vector2 originalVelocity;
+
+    // Cinemachine Reference
+    [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    [SerializeField] private Transform cutsceneTarget; // Target to look at during the cutscene
+    [SerializeField] private float zoomInOrthographicSize = 2;
+    [SerializeField] private float zoomTransitionTime = .3f;
+    [SerializeField] private float cameraMoveDamping = 1f; // Damping value for smooth camera movement
+
+    // Dialogue Control
+    private bool dialogueActivated;
+    private int currentStep;
+    private Coroutine displayCoroutine;
+
+    private Transform defaultFollowTarget;
+    private Transform defaultLookAtTarget;
+    private float defaultOrthographicSize;
+
+    private void Start()
     {
-        textComponent.text = string.Empty;
-        StartDialogue();
+        // Get the PlayerMovement and Rigidbody2D components from the player GameObject
+        playerMovement = player.GetComponent<PlayerMovement>();
+        playerRigidbody = player.GetComponent<Rigidbody2D>();
+
+        // Store the default camera settings
+        defaultFollowTarget = virtualCamera.Follow;
+        defaultLookAtTarget = virtualCamera.LookAt;
+        defaultOrthographicSize = virtualCamera.m_Lens.OrthographicSize;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (dialogueActivated)
         {
-            if (isTyping)
+            if (Input.GetButtonDown("Dialogue"))
             {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
-                isTyping = false;
-            }
-            else
-            {
-                NextLine();
+                if (displayCoroutine != null)
+                {
+                    // Complete current letter-by-letter display immediately
+                    StopCoroutine(displayCoroutine);
+                    dialogueText.text = dialogueSentences[currentStep]; // Show full sentence
+                }
+
+                // Move to the next dialogue step
+                AdvanceDialogue();
             }
         }
     }
 
-    void StartDialogue()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        index = 0;
-        StartCoroutine(TypeLine());
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            dialogueActivated = true;
+            originalVelocity = playerRigidbody.velocity; // Save the original velocity
+            playerRigidbody.velocity = Vector2.zero; // Stop the player
+            playerMovement.enabled = false; // Disable player movement
+
+            StartDialogue();
+        }
     }
 
-    IEnumerator TypeLine()
+    private void StartDialogue()
     {
-        isTyping = true;
-        textComponent.text = string.Empty;
-
-        foreach (char c in lines[index].ToCharArray())
+        // Hide Gameplay UI canvas
+        if (gameplayUICanvas != null)
         {
-            textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            gameplayUICanvas.SetActive(false);
         }
 
-        isTyping = false;
+        cinematicBar.Show(cinematicBarSize, transitionTime); // Show cinematic bars when dialogue starts
+        dialogueCanvas.SetActive(true);
+
+        // Switch camera target to the cutscene target
+        virtualCamera.Follow = cutsceneTarget;
+        virtualCamera.LookAt = cutsceneTarget;
+        virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_XDamping = cameraMoveDamping;
+        virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_YDamping = cameraMoveDamping;
+
+        // Initialize dialogue text display
+        speakerText.text = speaker[currentStep];
+        displayCoroutine = StartCoroutine(DisplayDialogueLetterByLetter(dialogueSentences[currentStep]));
     }
 
-    void NextLine()
+    private IEnumerator DisplayDialogueLetterByLetter(string sentence)
     {
-        if (index < lines.Length - 1)
+        dialogueText.text = "";
+
+        for (int i = 0; i < sentence.Length; i++)
         {
-            index++;
-            StartCoroutine(TypeLine());
+            dialogueText.text += sentence[i];
+            yield return new WaitForSeconds(0.03f); // Adjust this value to control the speed of text display per letter
+        }
+
+        displayCoroutine = null; // Reset coroutine reference
+    }
+
+    private void AdvanceDialogue()
+    {
+        currentStep++;
+        if (currentStep < speaker.Length)
+        {
+            speakerText.text = speaker[currentStep];
+            displayCoroutine = StartCoroutine(DisplayDialogueLetterByLetter(dialogueSentences[currentStep]));
         }
         else
         {
-            gameObject.SetActive(false); // Hide the dialogue box or handle end of dialogue
+            EndDialogue();
         }
+    }
+
+    private void EndDialogue()
+    {
+        dialogueCanvas.SetActive(false);
+        cinematicBar.Hide(transitionTime); // Hide cinematic bars when dialogue ends
+        playerMovement.enabled = true; // Enable player movement
+        playerRigidbody.velocity = originalVelocity; // Restore the original velocity
+
+        // Restore the camera to its default settings
+        virtualCamera.Follow = defaultFollowTarget;
+        virtualCamera.LookAt = defaultLookAtTarget;
+        virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_XDamping = cameraMoveDamping;
+        virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_YDamping = cameraMoveDamping;
+        StartCoroutine(ZoomOutAndDestroy(defaultOrthographicSize, zoomTransitionTime)); // Zoom out camera
+
+        // Show Gameplay UI canvas
+        if (gameplayUICanvas != null)
+        {
+            gameplayUICanvas.SetActive(true);
+        }
+    }
+
+    private IEnumerator ZoomOutAndDestroy(float targetSize, float duration)
+    {
+        float startSize = virtualCamera.m_Lens.OrthographicSize;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(startSize, targetSize, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        virtualCamera.m_Lens.OrthographicSize = targetSize;
+
+        // Ensure the camera is at the target size before destroying the GameObject
+        yield return new WaitForEndOfFrame(); // Wait for the end of the frame
+        Destroy(gameObject); // Destroy the dialogue GameObject
     }
 }
