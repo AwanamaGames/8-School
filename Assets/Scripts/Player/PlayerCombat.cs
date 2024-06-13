@@ -80,50 +80,74 @@ public class PlayerCombat : MonoBehaviour
 
                 switch(attackAngle){
                     case 1:
-                        animator.runtimeAnimatorController = attackR[comboCounter].animatorOV;
+                        animator.Play($"Attack{comboCounter}");
+                        ///animator.runtimeAnimatorController = attackR[comboCounter].animatorOV;
                         animator.SetFloat("Horizontal", 1);
                         animator.SetFloat("Vertical", 0);
+                        animator.SetFloat("attHorizontal", 1);
+                        animator.SetFloat("attVertical", 0);
                     break;
                     
                     case 2:
-                        animator.runtimeAnimatorController = attackRU[comboCounter].animatorOV;
+                        animator.Play($"Attack{comboCounter}");
+                        ///animator.runtimeAnimatorController = attackRU[comboCounter].animatorOV;
                         animator.SetFloat("Horizontal", 1);
                         animator.SetFloat("Vertical", 1);
+                        animator.SetFloat("attHorizontal", 1);
+                        animator.SetFloat("attVertical", 1);
                     break;
                     case 3:
-                        animator.runtimeAnimatorController = attackU[comboCounter].animatorOV;
+                        animator.Play($"Attack{comboCounter}");
+                        ///animator.runtimeAnimatorController = attackU[comboCounter].animatorOV;
                         animator.SetFloat("Horizontal", 0);
                         animator.SetFloat("Vertical", 1);
+                        animator.SetFloat("attHorizontal", 0);
+                        animator.SetFloat("attVertical", 1);
                     break;
                     case 4:
-                        animator.runtimeAnimatorController = attackLU[comboCounter].animatorOV;
+                        animator.Play($"Attack{comboCounter}");
+                        ///animator.runtimeAnimatorController = attackLU[comboCounter].animatorOV;
                         animator.SetFloat("Horizontal", -1);
                         animator.SetFloat("Vertical", 1);
+                        animator.SetFloat("attHorizontal", -1);
+                        animator.SetFloat("attVertical", 1);
                     break;
                     case 5:
-                        animator.runtimeAnimatorController = attackL[comboCounter].animatorOV;
+                        animator.Play($"Attack{comboCounter}");
+                        ///animator.runtimeAnimatorController = attackL[comboCounter].animatorOV;
                         animator.SetFloat("Horizontal", -1);
                         animator.SetFloat("Vertical", 0);
+                        animator.SetFloat("attHorizontal", -1);
+                        animator.SetFloat("attVertical", 0);
                     break;
                     case 6:
-                        animator.runtimeAnimatorController = attackLD[comboCounter].animatorOV;
+                        animator.Play($"Attack{comboCounter}");
+                        ///animator.runtimeAnimatorController = attackLD[comboCounter].animatorOV;
                         animator.SetFloat("Horizontal", -1);
                         animator.SetFloat("Vertical", -1);
+                        animator.SetFloat("attHorizontal", -1);
+                        animator.SetFloat("attVertical", -1);
                     break;
                     case 7:
-                        animator.runtimeAnimatorController = attackD[comboCounter].animatorOV;
+                        animator.Play($"Attack{comboCounter}");
+                        ///animator.runtimeAnimatorController = attackD[comboCounter].animatorOV;
                         animator.SetFloat("Horizontal", 0);
                         animator.SetFloat("Vertical", -1);
+                        animator.SetFloat("attHorizontal", 0);
+                        animator.SetFloat("attVertical", -1);
                     break;
                     case 8:
-                        animator.runtimeAnimatorController = attackRD[comboCounter].animatorOV;
+                        animator.Play($"Attack{comboCounter}");
+                        ///animator.runtimeAnimatorController = attackRD[comboCounter].animatorOV;
                         animator.SetFloat("Horizontal", 1);
                         animator.SetFloat("Vertical", -1);
+                        animator.SetFloat("attHorizontal", 1);
+                        animator.SetFloat("attVertical", -1);
                     break;
                     
                 }
 
-                animator.Play("Attack");
+                ///animator.Play("Attack");
                 comboCounter++; 
                 ///await EndAttack();
                 
