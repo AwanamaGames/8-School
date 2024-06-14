@@ -21,6 +21,7 @@ public class enemyhitbox : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
+            Debug.Log("test");
             player = coll.gameObject.GetComponent<pStatManager>();
             int damage = thisStat.stat.att - player.stat.def;
             player.GetComponent<pStatManager>().takeDMG(damage);
