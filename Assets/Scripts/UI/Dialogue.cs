@@ -108,6 +108,9 @@ public class Dialogue : MonoBehaviour
         virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_XDamping = cameraMoveDamping;
         virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_YDamping = cameraMoveDamping;
 
+        // Zoom in the camera
+        StartCoroutine(ZoomCamera(zoomInOrthographicSize, zoomTransitionTime));
+
         // Initialize dialogue text display
         speakerText.text = speaker[currentStep];
         displayCoroutine = StartCoroutine(DisplayDialogueLetterByLetter(dialogueSentences[currentStep]));
@@ -152,7 +155,9 @@ public class Dialogue : MonoBehaviour
         virtualCamera.LookAt = defaultLookAtTarget;
         virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_XDamping = cameraMoveDamping;
         virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>().m_YDamping = cameraMoveDamping;
-        StartCoroutine(ZoomOutAndDestroy(defaultOrthographicSize, zoomTransitionTime)); // Zoom out camera
+
+        // Zoom out the camera
+        StartCoroutine(ZoomOutAndDestroy(defaultOrthographicSize, zoomTransitionTime));
 
         // Show Gameplay UI canvas
         if (gameplayUICanvas != null)
@@ -178,5 +183,20 @@ public class Dialogue : MonoBehaviour
         // Ensure the camera is at the target size before destroying the GameObject
         yield return new WaitForEndOfFrame(); // Wait for the end of the frame
         Destroy(gameObject); // Destroy the dialogue GameObject
+    }
+
+    private IEnumerator ZoomCamera(float targetSize, float duration)
+    {
+        float startSize = virtualCamera.m_Lens.OrthographicSize;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(startSize, targetSize, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        virtualCamera.m_Lens.OrthographicSize = targetSize;
     }
 }
