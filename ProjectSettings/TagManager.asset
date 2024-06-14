@@ -8,6 +8,7 @@ TagManager:
   - globaltime
   - Enemy
   - Interactable
+  - PlayerHurtBox
   layers:
   - Default
   - TransparentFX
@@ -42,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ground
+    uniqueID: 4002811061
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

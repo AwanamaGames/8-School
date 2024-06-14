@@ -24,12 +24,30 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        MoveAnimation();
+        Movement();
+
+
+    }
+
+    void Movement()
+    {
         movHorizontal = Input.GetAxis("Horizontal");
         movVertical = Input.GetAxis("Vertical");
         direction = new Vector2(movHorizontal, movVertical);
         
+        if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        {
+            body.velocity = direction.normalized * GetComponent<pStatManager>().stat.movSpd * 0.4f;
+        }else 
+        {
         body.velocity = direction.normalized * GetComponent<pStatManager>().stat.movSpd;
+        }
+    }
 
+    void MoveAnimation()
+    {
         if (movHorizontal == 0 && movVertical == 0){
             animator.SetBool("isMoving", false);
         } else {
@@ -37,7 +55,5 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Horizontal", direction.x);
             animator.SetFloat("Vertical", direction.y);
         }
-
-
     }
 }
