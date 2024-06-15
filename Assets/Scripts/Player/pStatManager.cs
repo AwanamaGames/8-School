@@ -43,6 +43,7 @@ public class pStatManager : MonoBehaviour
     public void takeDMG(int damage)
     {
         Debug.Log(damage);
+        if (damage < 0){damage = 0;}
         stat.currentHP -= damage;
 
         if (stat.currentHP <= 0)

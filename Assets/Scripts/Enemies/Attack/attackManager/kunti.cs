@@ -68,7 +68,6 @@ public class kuntiAttackManager : MonoBehaviour, IAttack
     void indexCount()
     {
         index += 1;
-        Debug.Log(index);
         if (index == 7){index = 0;}
     }
 
