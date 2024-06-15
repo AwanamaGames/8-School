@@ -353,8 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f2e2dafafb2314ebab395b8f2a1321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statManager: {fileID: 2218967425036866766}
-  stat: {fileID: 0}
+  stat: {fileID: 2218967425036866766}
 --- !u!1 &1329253831131110286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1035,6 @@ GameObject:
   - component: {fileID: 3751948504079896965}
   - component: {fileID: 6148211294274173679}
   - component: {fileID: 5738340873328312151}
-  - component: {fileID: 5290416198524536960}
   m_Layer: 0
   m_Name: hitbox
   m_TagString: Untagged
@@ -1189,20 +1187,6 @@ PolygonCollider2D:
       - {x: 3.2, y: 0.8}
       - {x: 3, y: 1.3000001}
   m_UseDelaunayMesh: 0
---- !u!114 &5290416198524536960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6342355702762540185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f2e2dafafb2314ebab395b8f2a1321, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statManager: {fileID: 2218967425036866766}
-  stat: {fileID: 0}
 --- !u!1 &7569317501257431128
 GameObject:
   m_ObjectHideFlags: 0

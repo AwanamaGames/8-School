@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23727f169399d984eb5e4c8266234c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisStat: {fileID: 3186003952546616370}
+  thisStat: {fileID: 0}
   agent: {fileID: 5547555754060714512}
 --- !u!1 &5742714555363517595
 GameObject:
@@ -594,8 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f2e2dafafb2314ebab395b8f2a1321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statManager: {fileID: 3186003952546616370}
-  stat: {fileID: 0}
+  stat: {fileID: 3186003952546616370}
 --- !u!1 &7043897735675650382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1105,6 @@ GameObject:
   - component: {fileID: 7331438277843934514}
   - component: {fileID: 7223404227413281211}
   - component: {fileID: 3831166725433408780}
-  - component: {fileID: 3535394550003507924}
   m_Layer: 0
   m_Name: hitbox
   m_TagString: Untagged
@@ -1259,20 +1257,6 @@ PolygonCollider2D:
       - {x: 3.2, y: 0.8}
       - {x: 3, y: 1.3000001}
   m_UseDelaunayMesh: 0
---- !u!114 &3535394550003507924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8838218639895026353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f2e2dafafb2314ebab395b8f2a1321, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statManager: {fileID: 0}
-  stat: {fileID: 0}
 --- !u!1 &9000202332141365929
 GameObject:
   m_ObjectHideFlags: 0

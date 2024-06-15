@@ -82,5 +82,9 @@ public class StatManager : MonoBehaviour
         rb.velocity = Vector2.zero;
     }
 
+    public void turnAgro()
+    {
+        isAgro = true;
+    }
 
 }

@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class agroManager : MonoBehaviour
 {
-    public StatManager statManager;
-    public StatSO stat;
+    public StatManager stat;
     /* async void Start()
     {
         await getStat();
@@ -22,7 +21,7 @@ public class agroManager : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll){
         if (coll.gameObject.tag == "Player")
         {
-           statManager.isAgro = true;
+           stat.turnAgro();
         }
     }
 
