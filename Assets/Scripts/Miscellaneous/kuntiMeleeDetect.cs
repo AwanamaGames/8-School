@@ -17,21 +17,21 @@ public class kuntiMeleeDetect : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "PlayerBase")
         {
             statManager.inRange = true;
         }
     }
     void OnTriggerStay2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "PlayerBase")
         {
             attackManager.triggered();
         }
     }
     void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "PlayerBase")
         {
             statManager.inRange = false;
         }

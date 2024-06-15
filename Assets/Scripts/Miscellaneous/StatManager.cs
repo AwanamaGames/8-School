@@ -70,6 +70,7 @@ public class StatManager : MonoBehaviour
         if (stat.currentHP <= 0)
         {
             AddLeafsToPlayer(); // Call the new method
+            DestroyImmediate(stat);
             Destroy(gameObject);
         }
     }
