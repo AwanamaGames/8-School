@@ -17,6 +17,6 @@ MonoBehaviour:
   att: 50
   movSpd: 10
   attSpd: 1
-  def: 100
+  def: 70
   isAgro: 0
   leaf: 0
