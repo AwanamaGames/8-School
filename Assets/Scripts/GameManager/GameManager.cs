@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        scenes = new List<string> { "MainMenu", "Level1Test", "Level2Test", "Level3Test" };
+        scenes = new List<string> { "Level 1", "Level 2"};
         currentLevel = 0;
         ChangeState(GameState.Tutorial);
     }
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
     private void StartTutorial()
     {
         gameplaySO = Instantiate(defaultStatSO);
-        currentLevel = 1;
+        currentLevel = 0;
         Play(currentLevel);
     }
 
@@ -91,14 +91,14 @@ public class GameManager : MonoBehaviour
     {
         gameplaySO = Instantiate(defaultStatSO);
         gameplaySO.leaf = 0;
-        currentLevel = 1;
+        currentLevel = 0;
         Play(currentLevel);
     }
 
     private void HandleGameLose()
     {
         SaveProgress();
-        currentLevel = 1;
+        currentLevel = 0;
         gameplaySO = Instantiate(progressSO);
         gameplaySO.leaf = 0;
         Play(currentLevel);

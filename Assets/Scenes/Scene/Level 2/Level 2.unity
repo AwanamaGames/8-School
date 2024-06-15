@@ -329,6 +329,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8989644165630590301, guid: 0d5560ed5f67fec43b7bc7ce3a47fcea, type: 3}
   m_PrefabInstance: {fileID: 177127375}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &229981351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 229981353}
+  - component: {fileID: 229981352}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &229981352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229981351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d4eac6c37b2514aa4ea3fe9123ed77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  scenes: []
+  currentLevel: 0
+  defaultStatSO: {fileID: 11400000, guid: edce4129e86ec4f438eb7454b2352c2c, type: 2}
+  gameplaySO: {fileID: 11400000, guid: 7f5e8682cbc18b449ab545b93d169304, type: 2}
+  progressSO: {fileID: 11400000, guid: 2b8f4448e19669b4db8ca56be04d75bc, type: 2}
+--- !u!4 &229981353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229981351}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.301156, y: 3.9449081, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &258630801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -594,6 +644,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3201796856473154997, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5203307187631313417, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
       propertyPath: m_Name
       value: Player
@@ -15143,3 +15197,4 @@ SceneRoots:
   - {fileID: 391969288}
   - {fileID: 815851205}
   - {fileID: 488537274}
+  - {fileID: 229981353}
