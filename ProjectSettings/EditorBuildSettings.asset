@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GameManagerTest/MainMenu.unity
     guid: 6d0bde1ce2b4f204d82345c0bbcbf3f2
   - enabled: 1
+    path: Assets/Scenes/Scene/Tutorial Level 1/Level 1 tutorial.unity
+    guid: f12138fc7b63cad40aa48550c1aadc0f
+  - enabled: 1
     path: Assets/Scenes/Scene/Level 1/Level 1.unity
     guid: 430ecc84accb22648a3340d55a959fa9
   - enabled: 1

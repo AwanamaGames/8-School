@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        scenes = new List<string> { "Level 1", "Level 2"};
+        scenes = new List<string> { "Level 1 tutorial", "Level 1", "Level 2"};
         currentLevel = 0;
         ChangeState(GameState.Tutorial);
     }
