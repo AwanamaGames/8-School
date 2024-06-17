@@ -10,6 +10,7 @@ TagManager:
   - Interactable
   - PlayerHurtBox
   - PlayerBase
+  - BossRoom
   layers:
   - Default
   - TransparentFX
