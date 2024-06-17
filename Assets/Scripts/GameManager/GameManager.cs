@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public StatSO gameplaySO;
     public StatSO progressSO;
 
+    [SerializeField] private Animator transitionAnimator;
+
     private void Awake()
     {
         if (Instance == null)
@@ -26,11 +28,20 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // Check if current scene is "MainMenu" and disable children if true
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
     }
 
     private void Start()
     {
-        scenes = new List<string> { "Level 1 tutorial", "Level 1", "Level 2"};
+        scenes = new List<string> { "MainMenu", "Level 1 tutorial", "Level 1", "Level 2" };
         currentLevel = 0;
         ChangeState(GameState.Tutorial);
     }
@@ -83,25 +94,23 @@ public class GameManager : MonoBehaviour
     private void StartTutorial()
     {
         gameplaySO = Instantiate(defaultStatSO);
-        currentLevel = 0;
-        Play(currentLevel);
+        currentLevel = 1;
+        StartCoroutine(PlayWithTransition(currentLevel));
     }
 
     private void StartNewGame()
     {
         gameplaySO = Instantiate(defaultStatSO);
         gameplaySO.leaf = 0;
-        currentLevel = 0;
-        Play(currentLevel);
+        gameplaySO.currentHP = gameplaySO.maxHP;
+        currentLevel = 1;
+        StartCoroutine(PlayWithTransition(currentLevel));
     }
 
     private void HandleGameLose()
     {
         SaveProgress();
-        currentLevel = 0;
-        gameplaySO = Instantiate(progressSO);
-        gameplaySO.leaf = 0;
-        Play(currentLevel);
+        StartCoroutine(PlayWithTransition("GameOver"));
     }
 
     private void HandleLevelComplete()
@@ -113,19 +122,50 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Play(currentLevel);
+            StartCoroutine(PlayWithTransition(currentLevel));
         }
     }
 
     private void HandleGameWin()
     {
         Debug.Log("Game Won! Returning to Main Menu");
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(PlayWithTransition("MainMenu"));
     }
 
-    public void Play(int level)
+    private IEnumerator PlayWithTransition(int level)
     {
+        // Trigger the "End" animation
+        transitionAnimator.SetTrigger("End");
+
+        // Wait for the animation to finish
+        yield return new WaitForSeconds(1f);  // Adjust time if needed
+
+        // Load the scene
         SceneManager.LoadScene(scenes[level]);
+
+        // Trigger the "Start" animation
+        transitionAnimator.SetTrigger("Start");
+
+        // Wait for the animation to finish
+        yield return new WaitForSeconds(1f);  // Adjust time if needed
+    }
+
+    private IEnumerator PlayWithTransition(string sceneName)
+    {
+        // Trigger the "End" animation
+        transitionAnimator.SetTrigger("End");
+
+        // Wait for the animation to finish
+        yield return new WaitForSeconds(1f);  // Adjust time if needed
+
+        // Load the scene
+        SceneManager.LoadScene(sceneName);
+
+        // Trigger the "Start" animation
+        transitionAnimator.SetTrigger("Start");
+
+        // Wait for the animation to finish
+        yield return new WaitForSeconds(1f);  // Adjust time if needed
     }
 
     public void SaveProgress()
