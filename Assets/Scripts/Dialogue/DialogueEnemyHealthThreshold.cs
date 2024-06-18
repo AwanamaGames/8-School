@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using Cinemachine;
 using UnityEngine.AI;
 
-public class DialogueEnemy : MonoBehaviour
+public class DialogueEnemyHealthThreshold : MonoBehaviour
 {
     // UI References
     [SerializeField] private GameObject dialogueCanvas;
@@ -18,7 +18,7 @@ public class DialogueEnemy : MonoBehaviour
 
     // Dialogue Content
     [SerializeField] private string[] speaker;
-    [SerializeField][TextArea] private string[] dialogueSentences; // Each sentence will be displayed letter by letter
+    [SerializeField][TextArea] private string[] dialogueSentences;
     [SerializeField] private Sprite[] portrait;
 
     // Cinematic Bar Reference
@@ -36,13 +36,17 @@ public class DialogueEnemy : MonoBehaviour
     [SerializeField] private GameObject enemy;
     private NavMeshAgent enemyNavMeshAgent;
     private Animator enemyAnimator;
+    private StatManager enemyStat;
+
+    // Health Threshold
+    [SerializeField] private float healthThresholdPercent = 20f; // Percentage of health to trigger dialogue
 
     // Cinemachine Reference
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
-    [SerializeField] private Transform cutsceneTarget; // Target to look at during the cutscene
+    [SerializeField] private Transform cutsceneTarget;
     [SerializeField] private float zoomInOrthographicSize = 2;
     [SerializeField] private float zoomTransitionTime = .3f;
-    [SerializeField] private float cameraMoveDamping = 1f; // Damping value for smooth camera movement
+    [SerializeField] private float cameraMoveDamping = 1f;
 
     // Dialogue Control
     private bool dialogueActivated;
@@ -63,6 +67,9 @@ public class DialogueEnemy : MonoBehaviour
         enemyNavMeshAgent = enemy.GetComponent<NavMeshAgent>();
         enemyAnimator = enemy.GetComponent<Animator>();
 
+        // Get the stat for enemy current hp calculation
+        enemyStat = enemy.GetComponent<StatManager>();
+
         // Store the default camera settings
         defaultFollowTarget = virtualCamera.Follow;
         defaultLookAtTarget = virtualCamera.LookAt;
@@ -71,45 +78,43 @@ public class DialogueEnemy : MonoBehaviour
 
     private void Update()
     {
+        if (!dialogueActivated)
+        {
+            CheckHealthAndTriggerDialogue();
+        }
+
         if (dialogueActivated)
         {
             if (Input.GetButtonDown("Dialogue"))
             {
                 if (displayCoroutine != null)
                 {
-                    // Complete current letter-by-letter display immediately
                     StopCoroutine(displayCoroutine);
                     dialogueText.text = dialogueSentences[currentStep]; // Show full sentence
                 }
-
-                // Move to the next dialogue step
                 AdvanceDialogue();
             }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void CheckHealthAndTriggerDialogue()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (enemyStat != null && enemyStat.stat.currentHP <= enemyStat.stat.maxHP * (healthThresholdPercent / 100f))
         {
-            dialogueActivated = true;
-
-            // Disable player movement
-            originalPlayerVelocity = playerRigidbody.velocity;
-            playerRigidbody.velocity = Vector2.zero;
-            playerMovement.enabled = false;
-
-            // Stop the enemy
-            enemyNavMeshAgent.isStopped = true;
-            enemyAnimator.SetBool("isJumping", false);
-
-            // Start the dialogue
             StartDialogue();
+            Destroy(enemy); // Destroy enemy after starting the dialogue
         }
     }
 
     private void StartDialogue()
     {
+        dialogueActivated = true;
+
+        // Disable player movement
+        originalPlayerVelocity = playerRigidbody.velocity;
+        playerRigidbody.velocity = Vector2.zero;
+        playerMovement.enabled = false;
+
         // Hide Gameplay UI canvas
         if (gameplayUICanvas != null)
         {
@@ -140,7 +145,7 @@ public class DialogueEnemy : MonoBehaviour
         for (int i = 0; i < sentence.Length; i++)
         {
             dialogueText.text += sentence[i];
-            yield return new WaitForSeconds(0.01f); // Adjust this value to control the speed of text display per letter
+            yield return new WaitForSeconds(0.03f); // Adjust this value to control the speed of text display per letter
         }
 
         displayCoroutine = null; // Reset coroutine reference
@@ -166,9 +171,6 @@ public class DialogueEnemy : MonoBehaviour
         cinematicBar.Hide(transitionTime); // Hide cinematic bars when dialogue ends
         playerMovement.enabled = true; // Enable player movement
         playerRigidbody.velocity = originalPlayerVelocity; // Restore the original velocity
-
-        // Enable the enemy to move again
-        enemyNavMeshAgent.isStopped = false;
 
         // Restore the camera to its default settings
         virtualCamera.Follow = defaultFollowTarget;

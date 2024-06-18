@@ -138,7 +138,7 @@ public class DialogueEnemyDefeated : MonoBehaviour
         for (int i = 0; i < sentence.Length; i++)
         {
             dialogueText.text += sentence[i];
-            yield return new WaitForSeconds(0.03f); // Adjust this value to control the speed of text display per letter
+            yield return new WaitForSeconds(0.01f); // Adjust this value to control the speed of text display per letter
         }
 
         displayCoroutine = null; // Reset coroutine reference

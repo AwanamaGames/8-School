@@ -17,8 +17,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/GameManagerTest/Level3Test.unity
     guid: e5d92a63166367042b8ce0fc2cf6c63a
-  - enabled: 0
-    path: Assets/Scenes/GameManagerTest/MainMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/Scene/GameOver.unity
+    guid: 1e686c3bf6f828949ba7694454911eef
+  - enabled: 1
+    path: Assets/Scenes/Scene/MainMenu.unity
     guid: 6d0bde1ce2b4f204d82345c0bbcbf3f2
   - enabled: 1
     path: Assets/Scenes/Scene/Tutorial Level 1/Level 1 tutorial.unity
