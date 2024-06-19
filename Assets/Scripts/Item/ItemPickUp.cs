@@ -7,6 +7,7 @@ public class ItemPickUp : MonoBehaviour, IInteractable
 {
     public Item item;
     public Items itemDrop;
+    [HideInInspector] public StatSO stat;
 
     public int price;
     // Start is called before the first frame update

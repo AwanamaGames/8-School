@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class pStatManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class pStatManager : MonoBehaviour
     public LeafCounter LeafCounter;
 
     public List<ItemList> items = new List<ItemList>();
+    private List<ItemList> storedItems = new List<ItemList>();
     public bool isDoubleLeafActive = false;
 
     private void Awake()
@@ -66,8 +68,24 @@ public class pStatManager : MonoBehaviour
         }
     }
 
+    //public void RemoveItem(Item item)
+    //{
+    //    items.RemoveAll(i => i.item == item);
+    //}
+
+    #region For InventoryUI
+    public event Action InventoryChanged; // Event to notify inventory changes
+
+    public void AddItem(ItemList newItem)
+    {
+        items.Add(newItem);
+        InventoryChanged?.Invoke(); // Fire event to notify inventory change
+    }
+
     public void RemoveItem(Item item)
     {
         items.RemoveAll(i => i.item == item);
+        InventoryChanged?.Invoke(); // Fire event to notify inventory change
     }
+    #endregion
 }

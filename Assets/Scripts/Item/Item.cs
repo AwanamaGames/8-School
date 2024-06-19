@@ -117,7 +117,7 @@ public class IncreaseDef : Item
         defIncreased = false;
 
         // Remove the item from the list
-        stat.RemoveItem(item);
+        //stat.RemoveItem(item);
     }
 }
 
