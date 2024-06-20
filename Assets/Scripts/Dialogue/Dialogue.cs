@@ -42,6 +42,7 @@ public class Dialogue : MonoBehaviour
     private bool dialogueActivated;
     private int currentStep;
     private Coroutine displayCoroutine;
+    private bool isDisplayingSentence;
 
     private Transform defaultFollowTarget;
     private Transform defaultLookAtTarget;
@@ -69,11 +70,16 @@ public class Dialogue : MonoBehaviour
                 {
                     // Complete current letter-by-letter display immediately
                     StopCoroutine(displayCoroutine);
+                    Debug.Log("Full text ahead");
                     dialogueText.text = dialogueSentences[currentStep]; // Show full sentence
+                    displayCoroutine = null;
+                    isDisplayingSentence = false;
                 }
-
-                // Move to the next dialogue step
-                AdvanceDialogue();
+                else if (!isDisplayingSentence)
+                {
+                    // Move to the next dialogue step
+                    AdvanceDialogue();
+                }
             }
         }
     }
@@ -118,6 +124,7 @@ public class Dialogue : MonoBehaviour
 
     private IEnumerator DisplayDialogueLetterByLetter(string sentence)
     {
+        isDisplayingSentence = true;
         dialogueText.text = "";
 
         for (int i = 0; i < sentence.Length; i++)
@@ -127,6 +134,7 @@ public class Dialogue : MonoBehaviour
         }
 
         displayCoroutine = null; // Reset coroutine reference
+        isDisplayingSentence = false;
     }
 
     private void AdvanceDialogue()
