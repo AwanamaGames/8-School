@@ -2196,8 +2196,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0000000011680781, y: -0.00979855}
-  m_Size: {x: 0.3305653, y: 0.14214207}
+  m_Offset: {x: 0, y: -0.00979855}
+  m_Size: {x: 0.44, y: 0.29}
   m_Direction: 1
 --- !u!1 &4819640408908258800
 GameObject:
@@ -2633,6 +2633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1642f9995737ddf4dae2741b518379d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffectDetails: {fileID: 0}
   attackL:
   - {fileID: 11400000, guid: 04a77a6589d174249b69b3d6b69ca9af, type: 2}
   - {fileID: 11400000, guid: b89b128a88828bb42bb29441307f6775, type: 2}
