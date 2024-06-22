@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PermanentUpgrade : MonoBehaviour, IInteractable
 {
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails;
+
     public StatUpgradeSO attackUpgrade;
     public StatUpgradeSO maxHPUpgrade;
     public StatUpgradeSO defenseUpgrade;
@@ -59,6 +61,11 @@ public class PermanentUpgrade : MonoBehaviour, IInteractable
 
     private void ApplyUpgrade(StatUpgradeSO upgrade)
     {
+        if (soundEffectDetails.statUpgradeSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.statUpgradeSoundEffect);
+        }
+
         switch (upgrade.statType)
         {
             case StatType.Attack:

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour, IInteractable
 {
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails;
+
     public Item item;
     public Items itemDrop;
     [HideInInspector] public StatSO stat;
@@ -25,7 +27,13 @@ public class ItemPickUp : MonoBehaviour, IInteractable
 
     public void AddItem(pStatManager player)
     {
-        foreach(ItemList i in player.items)
+        // Play attack sound if there is one
+        if (soundEffectDetails.itemGetSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.itemGetSoundEffect);
+        }
+
+        foreach (ItemList i in player.items)
         {
             if (i.name == item.GiveName())
             {

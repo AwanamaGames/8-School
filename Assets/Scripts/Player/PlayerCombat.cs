@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails;
 
     public List<attackSO> attackL;
     public List<attackSO> attackLU;
@@ -46,7 +47,8 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     async void Update()
     {
-        if (Input.GetButtonDown("Fire1")){
+        if (Input.GetButtonDown("Fire1"))
+        {
             Attack();
         }
         ExitAttack();
@@ -71,10 +73,18 @@ public class PlayerCombat : MonoBehaviour
 
     }
     void Attack(){
+
         if (comboDelay == false && comboCounter <= attackD.Count){
             CancelInvoke("newEndCombo");
 
             if(attackDelay == false){
+
+                // Play attack sound if there is one
+                if (soundEffectDetails.playerAttackSoundEffect != null)
+                {
+                    SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.playerAttackSoundEffect);
+                }
+
                 MouseAngle();
 
 
