@@ -49,10 +49,14 @@ public class ItemPickUp : MonoBehaviour, IInteractable
     {
         switch (itemToAssign)
         {
-            case Items.AirSuci:
-                return new AirSuci();
+            case Items.CursedDollUpperHalf:
+                return new CursedDollUpperHalf();
+            case Items.CursedDollLowerHalf:
+                return new CursedDollLowerHalf();
             case Items.ObatMerah:
                 return new ObatMerah();
+            case Items.KerisBracelet:
+                return new KerisBracelet();
 
             #region New Items
             case Items.MovSpeedDuration:
@@ -64,7 +68,7 @@ public class ItemPickUp : MonoBehaviour, IInteractable
             #endregion
 
             default:
-                return new AirSuci();
+                return new ObatMerah();
         }
     }
 
@@ -84,9 +88,12 @@ public class ItemPickUp : MonoBehaviour, IInteractable
 public enum Items
 {
     ObatMerah,
-    AirSuci,
+    CursedDollUpperHalf,
+    CursedDollLowerHalf,
+    KerisBracelet,
     MovSpeedDuration,
     IncreaseDef,
-    DoubleLeaf
+    DoubleLeaf,
+    
 
 }

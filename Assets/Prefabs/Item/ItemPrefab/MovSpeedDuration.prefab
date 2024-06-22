@@ -176,7 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d201a64041c830441bd3635676a8d426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDrop: 2
+  soundEffectDetails: {fileID: 0}
+  itemDrop: 4
+  stat: {fileID: 0}
+  price: 0
 --- !u!210 &-4513888569665371766
 SortingGroup:
   m_ObjectHideFlags: 0

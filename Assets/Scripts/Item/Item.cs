@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using JetBrains.Annotations;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.Progress;
@@ -20,6 +22,11 @@ public abstract class Item
 
    }
 
+   public virtual void OnDash(pStatManager stat, int stacks)
+   {
+
+   }
+
 }
 
 public class ObatMerah : Item
@@ -29,22 +36,58 @@ public class ObatMerah : Item
         return "Obat Merah";
     }
     public override void Update(pStatManager stat, int stacks)
-    {
-        stat.stat.currentHP += 2 * stacks; 
+    {   
+        if (stat.stat.currentHP < stat.stat.maxHP)
+        {
+            stat.stat.currentHP += 2 * stacks; 
+        }
     }
 }
 
-public class AirSuci : Item
+public class CursedDollUpperHalf : Item
 {
     public override string GiveName()
     {
-        return "Air Suci";
+        return "Cursed Doll Upper Half";
     }
     public override void OnHit(pStatManager stat, hitbox hitbox, StatManager enemy, int stacks)
     {
         if (enemy.stat.currentHP / enemy.stat.maxHP >= 0.5)
         {
-            hitbox.totalDamage = (int)(hitbox.totalDamage * 1.5);
+            hitbox.totalDamage = (int)(hitbox.totalDamage * (1 + 0.1 * stacks));
+        }
+    }
+}
+
+public class CursedDollLowerHalf : Item
+{
+    public override string GiveName()
+    {
+        return "Cursed Doll Lower Half";
+    }
+    public override void OnHit(pStatManager stat, hitbox hitbox, StatManager enemy, int stacks)
+    {
+        if (enemy.stat.currentHP / enemy.stat.maxHP <= 0.5)
+        {
+            hitbox.totalDamage = (int)(hitbox.totalDamage * (1 + 0.1 * stacks));
+        }
+    }
+}
+
+public class KerisBracelet : Item
+{
+    GameObject effect;
+    public override string GiveName()
+    {
+        return "Keris Bracelet";
+    }
+    public override async void OnDash(pStatManager stat, int stacks)
+    {
+        if (effect == null) {effect = (GameObject)Resources.Load("Circle", typeof(GameObject));}
+        for (int i = 0; i < stacks; i++) 
+        {
+            GameObject circle = GameObject.Instantiate(effect, stat.transform.position, quaternion.identity);
+            await Task.Delay(500);
         }
     }
 }

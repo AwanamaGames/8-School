@@ -55,19 +55,24 @@ public class bossAttackManager : MonoBehaviour
 
     void Update()
     {   
-        time = Time.time;
+        if (time < 2)
+        {
+            time = Time.time;
+        }
         if (isAttacking == false && time > 1)
         {
             if (meleeAttakIsCooldown == false)
         {;
-            ///attack();
-            meleeAttakIsCooldown = true;
+            attack();
         }
 
             else if (rangeAttackIsCooldown == false)
         {
-            Debug.Log(bulletfrom.position - bawah);
             rangeAttack();
+        }
+            else 
+        {
+            agent.SetDestination(player.transform.position);
         }
         }
     }

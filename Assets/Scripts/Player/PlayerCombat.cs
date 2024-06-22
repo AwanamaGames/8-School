@@ -42,6 +42,7 @@ public class PlayerCombat : MonoBehaviour
         animator = GetComponent<Animator>();
         delayAngle = -5f;
         lastComboEnd = -2f;
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     // Update is called once per frame

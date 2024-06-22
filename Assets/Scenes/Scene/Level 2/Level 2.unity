@@ -364,6 +364,7 @@ MonoBehaviour:
   defaultStatSO: {fileID: 11400000, guid: edce4129e86ec4f438eb7454b2352c2c, type: 2}
   gameplaySO: {fileID: 11400000, guid: 7f5e8682cbc18b449ab545b93d169304, type: 2}
   progressSO: {fileID: 11400000, guid: 2b8f4448e19669b4db8ca56be04d75bc, type: 2}
+  transitionAnimator: {fileID: 0}
 --- !u!4 &229981353
 Transform:
   m_ObjectHideFlags: 0
@@ -648,6 +649,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 815851206}
+    - target: {fileID: 1562629111411125192, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5203307187631313417, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
       propertyPath: m_Name
       value: Player
@@ -14539,7 +14544,7 @@ MonoBehaviour:
   m_VoxelSize: 0.033333335
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 58f35430d86a182408129a3f94facef0, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 691fff049ded08c46a188617117a179d, type: 2}
 --- !u!4 &1542496246
 Transform:
   m_ObjectHideFlags: 0

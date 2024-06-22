@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,11 +15,22 @@ public class PlayerMovement : MonoBehaviour
     float movVertical;
     bool isMoving;
     Animator animator;
+    pStatManager playerStat;
+    
+
+
+    [Header("Dash")]
+    bool isDashing;
+    [SerializeField] float dashDuration;
+    [SerializeField] float dashSpeed;
+    [SerializeField] float dashCooldown;
+    [SerializeField] bool isDashCooldown;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        playerStat = GetComponent<pStatManager>();
     }
 
     // Update is called once per frame
@@ -27,6 +39,12 @@ public class PlayerMovement : MonoBehaviour
 
         MoveAnimation();
         Movement();
+        if (Input.GetKeyDown(KeyCode.LeftShift) && isDashing == false && isDashCooldown == false)
+        {
+            StartCoroutine(Dashing());
+            StartCoroutine(DashCooldown());
+            
+        }
 
 
     }
@@ -36,14 +54,22 @@ public class PlayerMovement : MonoBehaviour
         movHorizontal = Input.GetAxis("Horizontal");
         movVertical = Input.GetAxis("Vertical");
         direction = new Vector2(movHorizontal, movVertical);
+
+        if (isDashing)
+        {
+            body.velocity = direction.normalized * GetComponent<pStatManager>().stat.movSpd * dashSpeed;
+            return;
+        }
         
         if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             body.velocity = direction.normalized * GetComponent<pStatManager>().stat.movSpd * 0.4f;
         }else 
         {
-        body.velocity = direction.normalized * GetComponent<pStatManager>().stat.movSpd;
+            body.velocity = direction.normalized * GetComponent<pStatManager>().stat.movSpd;
         }
+
+        
     }
 
     void MoveAnimation()
@@ -55,5 +81,20 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Horizontal", direction.x);
             animator.SetFloat("Vertical", direction.y);
         }
+    }
+
+    private IEnumerator Dashing()
+    {
+        isDashing = true;
+        playerStat.CallItemOnDash();
+        yield return new WaitForSeconds(dashDuration);
+        isDashing = false;
+    }
+
+    private IEnumerator DashCooldown()
+    {
+        isDashCooldown = true;
+        yield return new WaitForSeconds(dashCooldown);
+        isDashCooldown = false;
     }
 }

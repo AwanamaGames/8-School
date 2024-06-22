@@ -23,6 +23,9 @@ public class pStatManager : MonoBehaviour
     {
         stat = GameManager.Instance.gameplaySO;
 
+        ///KerisBracelet item = new KerisBracelet();
+        ///items.Add(new ItemList(item, item.GiveName(), 1));
+
         StartCoroutine(CallItemUpdate());
     }
 
@@ -65,6 +68,14 @@ public class pStatManager : MonoBehaviour
         foreach (ItemList i in items)
         {
             i.item.OnHit(this, hitbox, enemy, i.stacks);
+        }
+    }
+
+    public void CallItemOnDash()
+    {
+        foreach (ItemList i in items)
+        {
+            i.item.OnDash(this, i.stacks);
         }
     }
 
