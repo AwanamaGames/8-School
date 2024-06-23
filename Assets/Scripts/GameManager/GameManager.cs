@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        scenes = new List<string> { "MainMenu", "Level 1 tutorial", "Level 1", "Level 2" };
+        scenes = new List<string> { "MainMenu", "Level 1 tutorial", "Level 1", "Level 2", "Level 3", "Level 4", "Level 5" };
         currentLevel = 0;
         ChangeState(GameState.Tutorial);
     }
@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
     {
         gameplaySO = Instantiate(defaultStatSO);
         gameplaySO.currentHP = gameplaySO.maxHP;
-        currentLevel = 1;
+        currentLevel = 6;
         StartCoroutine(PlayWithTransition(currentLevel));
     }
 
