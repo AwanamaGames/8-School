@@ -15,7 +15,7 @@ public class spawner : MonoBehaviour, IInteractable
         
         for (int i = 0; i < quantity; i++){
             rng = Random.Range(0, hantu.Count);
-            Instantiate(hantu[rng], Random.insideUnitSphere * 2, Quaternion.identity);
+            Instantiate(hantu[rng], Random.insideUnitSphere * 0.5f, Quaternion.identity);
         }
         
 

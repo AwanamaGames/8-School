@@ -55,9 +55,12 @@ public class bossAttackManager : MonoBehaviour
 
     void Update()
     {   
-        time = Time.time;
-        
-        if (isAttacking == false && time > 1)
+        if (bossRoom == null)
+        {
+            bossRoom = GameObject.FindGameObjectWithTag("BossRoom").GetComponent<BossRoomManager>();
+            return;
+        }
+        if (isAttacking == false)
         {
             if (rangeAttackIsCooldown == false)
         {;
@@ -97,7 +100,7 @@ public class bossAttackManager : MonoBehaviour
     async void rangeAttack()
     {   
         isAttacking = true;
-        transform.position = bossRoom.center.position;
+        agent.SetDestination(bossRoom.center.position);
         agent.SetDestination(this.transform.position);
         for (int i = 0; i < 5; i++){
             projectile[i*4].transform.position = bulletfrom.position;

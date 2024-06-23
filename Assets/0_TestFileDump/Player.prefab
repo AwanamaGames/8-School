@@ -2503,6 +2503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 8909505906678285071}
+  soundEffectDetails: {fileID: 0}
   stat: {fileID: 0}
   LeafCounter: {fileID: 6890479240561428778}
   items: []
@@ -2585,7 +2586,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &5614308522541954078
 MonoBehaviour:
   m_ObjectHideFlags: 0
