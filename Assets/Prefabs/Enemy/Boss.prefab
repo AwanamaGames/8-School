@@ -397,6 +397,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originStat: {fileID: 11400000, guid: 08d3bb9457dacf74ba0bbc59aac03952, type: 2}
   healthBar: {fileID: 7217060371766230441}
+  soundEffectDetails: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}
+  enemyType: Boss
   stat: {fileID: 0}
   rb: {fileID: 0}
   isAgro: 0

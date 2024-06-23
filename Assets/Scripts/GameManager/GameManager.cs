@@ -28,15 +28,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        // Check if current scene is "MainMenu" and disable children if true
-        if (SceneManager.GetActiveScene().name == "MainMenu")
-        {
-            foreach (Transform child in transform)
-            {
-                child.gameObject.SetActive(false);
-            }
-        }
     }
 
     private void Start()
@@ -129,6 +120,7 @@ public class GameManager : MonoBehaviour
     private void HandleGameWin()
     {
         Debug.Log("Game Won! Returning to Main Menu");
+        currentLevel = 0;
         StartCoroutine(PlayWithTransition("MainMenu"));
     }
 

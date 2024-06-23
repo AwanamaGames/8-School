@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: StatUpgrade_MaxHP
   m_EditorClassIdentifier: 
   upgradeName: MAXHP UP
-  price: 5
   statType: 1
+  price: 5
   upgradeAmount: 10

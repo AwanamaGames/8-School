@@ -771,6 +771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originStat: {fileID: 11400000, guid: 973896ca99ce97c4e898173870a742a9, type: 2}
   healthBar: {fileID: 7767738471399064353}
+  soundEffectDetails: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}
+  enemyType: Tuyul
   stat: {fileID: 0}
   rb: {fileID: 0}
   isAgro: 0
@@ -854,6 +856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAgro: 0
   agent: {fileID: 0}
+  soundEffectDetails: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}
 --- !u!61 &4732388209257563388
 BoxCollider2D:
   m_ObjectHideFlags: 0

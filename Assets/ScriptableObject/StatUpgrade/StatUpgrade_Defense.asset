@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: StatUpgrade_Defense
   m_EditorClassIdentifier: 
   upgradeName: DEF UP
-  price: 3
   statType: 2
+  price: 5
   upgradeAmount: 3

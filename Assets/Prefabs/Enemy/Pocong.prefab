@@ -1124,6 +1124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originStat: {fileID: 11400000, guid: 5250d25f9a8dde84f88ee7edf9fd4964, type: 2}
   healthBar: {fileID: 6804289832781081818}
+  soundEffectDetails: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}
+  enemyType: Pocong
   stat: {fileID: 0}
   rb: {fileID: 0}
   isAgro: 0
@@ -1194,6 +1196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agro: 0
   isAttacking: 0
+  soundEffectDetails: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}
 --- !u!114 &6249969406390838591
 MonoBehaviour:
   m_ObjectHideFlags: 0

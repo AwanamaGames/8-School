@@ -6,6 +6,9 @@ using Cinemachine;
 
 public class DialogueEnvironmentDestroyed : MonoBehaviour
 {
+    // Sound Effect
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails;
+
     // UI References
     [SerializeField] private GameObject dialogueCanvas;
     [SerializeField] private TMP_Text speakerText;
@@ -95,6 +98,11 @@ public class DialogueEnvironmentDestroyed : MonoBehaviour
 
     private void StartDialogue()
     {
+        if (soundEffectDetails.dialogueSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.dialogueSoundEffect);
+        }
+
         dialogueActivated = true;
 
         // Disable player movement

@@ -11,6 +11,7 @@ public class tuyulAttackManager : MonoBehaviour, IAttack
     private GameObject player;
     public NavMeshAgent agent;
 
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails;
 
     async void Start()
     {
@@ -44,8 +45,12 @@ public class tuyulAttackManager : MonoBehaviour, IAttack
     }
 
     public async void attack()
-    {   
-        
+    {
+        if (soundEffectDetails.tuyulAttackSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.tuyulAttackSoundEffect);
+        }
+
         float x_distance = player.transform.position.x - transform.position.x;
         float y_distance = player.transform.position.y - transform.position.y;
         float i = Mathf.Atan2 (y_distance, x_distance) * Mathf.Rad2Deg;

@@ -13,5 +13,16 @@ MonoBehaviour:
   m_Name: SoundEffectDetailsSO
   m_EditorClassIdentifier: 
   playerAttackSoundEffect: {fileID: 11400000, guid: 959519118edf3d7459a323c00130f5cd, type: 2}
+  playerMovementSoundEffect: {fileID: 11400000, guid: 9ee7a1e131eff0848abadc0d5906d201, type: 2}
+  playerGameOverSoundEffect: {fileID: 11400000, guid: a6fc8e24982d6f842a5e1cdd54adfd98, type: 2}
+  playerDashSoundEffect: {fileID: 11400000, guid: f0a2235b1f5e3a84bb7d814c4a64e69c, type: 2}
   itemGetSoundEffect: {fileID: 11400000, guid: bfc39051a563e234ea5039355e953927, type: 2}
   statUpgradeSoundEffect: {fileID: 11400000, guid: b64e34ceb0d48634192738a8b031b2c0, type: 2}
+  gateSoundEffect: {fileID: 11400000, guid: cc82eaf3801696646a0518bfc4988772, type: 2}
+  dialogueSoundEffect: {fileID: 11400000, guid: aa337854b529cd64a9cedc52d1a5644a, type: 2}
+  pocongAttackSoundEffect: {fileID: 11400000, guid: 22041870bd9061e46aeddd19496deefe, type: 2}
+  pocongDefeatedSoundEffect: {fileID: 11400000, guid: 8a809300eb93c9640a4bfaa68f6ea716, type: 2}
+  kuntiAttackSoundEffect: {fileID: 11400000, guid: 5f4b0710a81b52143b355281deca086c, type: 2}
+  kuntiDefeatedSoundEffect: {fileID: 11400000, guid: 622c78a653823d04aba17703dc4b53dc, type: 2}
+  tuyulAttackSoundEffect: {fileID: 11400000, guid: d91186415085a684f92bf8f20f086ae6, type: 2}
+  tuyulDefeatedSoundEffect: {fileID: 11400000, guid: c65ea1f9da12592428837b4cb7f418f7, type: 2}

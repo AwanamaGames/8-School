@@ -8,6 +8,10 @@ public class StatManager : MonoBehaviour
 {
     [SerializeField] public StatSO originStat;
     [SerializeField] FloatingHealthBar healthBar;
+
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails; // Reference to the sound effects scriptable object
+    [SerializeField] private string enemyType; // Add this to identify the enemy type
+
     public StatSO stat;
 
     public Rigidbody2D rb;
@@ -69,6 +73,7 @@ public class StatManager : MonoBehaviour
 
         if (stat.currentHP <= 0)
         {
+            PlayDefeatedSound(); // Play the defeated sound effect
             AddLeafsToPlayer(); // Call the new method
             DestroyImmediate(stat);
             Destroy(gameObject);
@@ -88,4 +93,35 @@ public class StatManager : MonoBehaviour
         isAgro = true;
     }
 
+    private void PlayDefeatedSound() // Method to play the defeated sound effect
+    {
+        if (soundEffectDetails != null)
+        {
+            SoundEffectSO soundEffect = null;
+            switch (enemyType)
+            {
+                case "Pocong":
+                    soundEffect = soundEffectDetails.pocongDefeatedSoundEffect;
+                    break;
+                case "Kunti":
+                    soundEffect = soundEffectDetails.kuntiDefeatedSoundEffect;
+                    break;
+                case "Tuyul":
+                    soundEffect = soundEffectDetails.tuyulDefeatedSoundEffect;
+                    break;
+                // Add cases for other enemy types
+                // case "AnotherEnemy":
+                //     soundEffect = soundEffectDetails.anotherEnemyDefeatedSoundEffect;
+                //     break;
+                default:
+                    Debug.LogWarning("Enemy type not recognized for sound effects.");
+                    break;
+            }
+
+            if (soundEffect != null)
+            {
+                SoundEffectManager.Instance.PlaySoundEffect(soundEffect);
+            }
+        }
+    }
 }

@@ -8,6 +8,9 @@ public class pocongAttackManager : MonoBehaviour, IAttack
     Animator animator;
     GameObject player;
     public bool isAttacking;
+
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -17,6 +20,12 @@ public class pocongAttackManager : MonoBehaviour, IAttack
     }
 
     void attack(){
+
+        if (soundEffectDetails.pocongAttackSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.pocongAttackSoundEffect);
+        }
+
         Vector2 direction = (player.transform.position - transform.position).normalized;
         
         animator.SetFloat("x", direction.x);

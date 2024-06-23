@@ -713,6 +713,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originStat: {fileID: 11400000, guid: f71a700596e42904aa86131e62728a92, type: 2}
   healthBar: {fileID: 7217060371766230441}
+  soundEffectDetails: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}
+  enemyType: Kunti
   stat: {fileID: 0}
   rb: {fileID: 0}
   isAgro: 0
@@ -796,6 +798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAgro: 0
   agent: {fileID: 0}
+  soundEffectDetails: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}
   isAttacking: 0
 --- !u!61 &7248237312095462937
 BoxCollider2D:

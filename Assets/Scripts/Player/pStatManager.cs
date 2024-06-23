@@ -6,6 +6,8 @@ using System;
 public class pStatManager : MonoBehaviour
 {
     [SerializeField] FloatingHealthBar healthBar;
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails;
+
     public StatSO stat;
     public LeafCounter LeafCounter;
 
@@ -58,6 +60,11 @@ public class pStatManager : MonoBehaviour
 
         if (stat.currentHP <= 0)
         {
+            if (soundEffectDetails.playerGameOverSoundEffect != null)
+            {
+                SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.playerGameOverSoundEffect);
+            }
+
             GameManager.Instance.ChangeState(GameState.GameLose);
             GameObject.Destroy(gameObject);
         }

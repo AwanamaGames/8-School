@@ -14,6 +14,8 @@ public class kuntiAttackManager : MonoBehaviour, IAttack
     private bool meleeAttakIsCooldown = false;
     StatManager statManager;
 
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails;
+
     Animator animator;
     public bool isAttacking;
     
@@ -42,7 +44,11 @@ public class kuntiAttackManager : MonoBehaviour, IAttack
     }
 
     async void rangeAttackAnimation()
-    {   
+    {
+        if (soundEffectDetails.kuntiAttackSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.kuntiAttackSoundEffect);
+        }
 
         Vector2 direction = (player.transform.position - transform.position).normalized;
         

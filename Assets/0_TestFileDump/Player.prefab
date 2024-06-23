@@ -2600,6 +2600,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 9191837764114053906}
   movSpeed: 2.5
+  dashDuration: 0.25
+  dashSpeed: 1.75
+  dashCooldown: 1
+  isDashCooldown: 0
+  soundEffectDetails: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}
 --- !u!95 &1215454513080850120
 Animator:
   serializedVersion: 5

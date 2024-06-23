@@ -9,6 +9,7 @@ public class LevelTransitionGate : MonoBehaviour
     private GameObject currentPlayer;
 
     [SerializeField] private TextMeshProUGUI interactPrompt;
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails;
 
     private void Update()
     {
@@ -16,6 +17,10 @@ public class LevelTransitionGate : MonoBehaviour
         {
             if (currentPlayer != null)
             {
+                if (soundEffectDetails.gateSoundEffect != null)
+                {
+                    SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.gateSoundEffect);
+                }
                 // Inform the GameManager to change the state to LevelComplete, which will handle the transition to the next level
                 GameManager.Instance.ChangeState(GameState.LevelComplete);
             }

@@ -7,6 +7,9 @@ using UnityEngine.AI;
 
 public class DialogueEnemy : MonoBehaviour
 {
+    // Sound Effect
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails;
+
     // UI References
     [SerializeField] private GameObject dialogueCanvas;
     [SerializeField] private TMP_Text speakerText;
@@ -116,6 +119,11 @@ public class DialogueEnemy : MonoBehaviour
 
     private void StartDialogue()
     {
+        if (soundEffectDetails.dialogueSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.dialogueSoundEffect);
+        }
+
         // Hide Gameplay UI canvas
         if (gameplayUICanvas != null)
         {

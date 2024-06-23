@@ -7,6 +7,7 @@ public class Gate : MonoBehaviour
 {
     private GameObject currentPlayer;
 
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails;
     [SerializeField] private Transform destination;
     [SerializeField] private TextMeshProUGUI interactPrompt;
 
@@ -16,6 +17,11 @@ public class Gate : MonoBehaviour
         {
             if (currentPlayer != null)
             {
+                if (soundEffectDetails.gateSoundEffect != null)
+                {
+                    SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.gateSoundEffect);
+                }
+
                 currentPlayer.transform.position = destination.position;
             }
         }

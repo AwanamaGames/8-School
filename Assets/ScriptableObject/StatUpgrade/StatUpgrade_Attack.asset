@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: StatUpgrade_Attack
   m_EditorClassIdentifier: 
   upgradeName: ATK UP
-  price: 3
   statType: 0
-  upgradeAmount: 5
+  price: 5
+  upgradeAmount: 3
