@@ -13,7 +13,7 @@ public class bossAttackManager : MonoBehaviour
     GameObject player;
     private int index = 0;
     private bool rangeAttackIsCooldown = false;
-    private bool meleeAttakIsCooldown = false;
+    private bool meleeAttackIsCooldown = false;
     StatManager statManager;
 
     Animator animator;
@@ -55,20 +55,18 @@ public class bossAttackManager : MonoBehaviour
 
     void Update()
     {   
-        if (time < 2)
-        {
-            time = Time.time;
-        }
+        time = Time.time;
+        
         if (isAttacking == false && time > 1)
         {
-            if (meleeAttakIsCooldown == false)
+            if (rangeAttackIsCooldown == false)
         {;
-            attack();
+            rangeAttack();
         }
 
-            else if (rangeAttackIsCooldown == false)
+            else if (meleeAttackIsCooldown == false)
         {
-            rangeAttack();
+            attack();
         }
             else 
         {
@@ -100,6 +98,7 @@ public class bossAttackManager : MonoBehaviour
     {   
         isAttacking = true;
         transform.position = bossRoom.center.position;
+        agent.SetDestination(this.transform.position);
         for (int i = 0; i < 5; i++){
             projectile[i*4].transform.position = bulletfrom.position;
             projectile[i*4].SetActive(true);
@@ -129,6 +128,7 @@ public class bossAttackManager : MonoBehaviour
 
     async Task isCooldownRA()
     {
+        await Task.Delay(5000);
         isAttacking = false;
         rangeAttackIsCooldown = true;
         await Task.Delay(18000);
@@ -153,7 +153,7 @@ public class bossAttackManager : MonoBehaviour
 
     public void triggered()
     {
-        if (meleeAttakIsCooldown == false)
+        if (meleeAttackIsCooldown == false)
         {
             attack();
         }
@@ -162,9 +162,9 @@ public class bossAttackManager : MonoBehaviour
     async Task isCooldownMA()
     {
         isAttacking = false;
-        meleeAttakIsCooldown = true;
+        meleeAttackIsCooldown = true;
         await Task.Delay(35000);
-        meleeAttakIsCooldown = false;
+        meleeAttackIsCooldown = false;
     }
 
     public UnityEngine.Vector3 evaluateAtas(float t)
