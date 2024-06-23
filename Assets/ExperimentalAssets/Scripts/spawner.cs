@@ -6,13 +6,18 @@ public class spawner : MonoBehaviour, IInteractable
 {
     public List<GameObject> hantu;
     public List<StatSO> hantuSO;
-    public int rng;
+    private int rng;
+    private int quantity;
 
     public void Interact()
     {
-        rng = Random.Range(0, hantu.Count);
-        Instantiate(hantu[rng], Random.insideUnitSphere * 2, Quaternion.identity);
-        StatUp(rng);
+        quantity = Random.Range(0, 5);
+        
+        for (int i = 0; i < quantity; i++){
+            rng = Random.Range(0, hantu.Count);
+            Instantiate(hantu[rng], Random.insideUnitSphere * 2, Quaternion.identity);
+        }
+        
 
     }
 
@@ -21,12 +26,4 @@ public class spawner : MonoBehaviour, IInteractable
     {
     }
 
-    void StatUp(int rng)
-    {
-        hantuSO[rng].maxHP += 10;
-        hantuSO[rng].currentHP += 10;
-        hantuSO[rng].att += 8;
-        hantuSO[rng].def += 1;
-        hantuSO[rng].leaf += 5;
-    }
 }
