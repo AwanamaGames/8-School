@@ -109,10 +109,9 @@ public class StatManager : MonoBehaviour
                 case "Tuyul":
                     soundEffect = soundEffectDetails.tuyulDefeatedSoundEffect;
                     break;
-                // Add cases for other enemy types
-                // case "AnotherEnemy":
-                //     soundEffect = soundEffectDetails.anotherEnemyDefeatedSoundEffect;
-                //     break;
+                case "Boss":
+                    soundEffect = soundEffectDetails.bossDefeatedSoundEffect;
+                    break;
                 default:
                     Debug.LogWarning("Enemy type not recognized for sound effects.");
                     break;

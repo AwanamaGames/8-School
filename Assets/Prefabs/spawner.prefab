@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 6367120371940057559}
   - component: {fileID: 3094629765817723560}
   - component: {fileID: 4177932657921632519}
+  - component: {fileID: 7947488690000055074}
   m_Layer: 0
   m_Name: spawner
   m_TagString: Interactable
@@ -305,6 +306,7 @@ MonoBehaviour:
   - {fileID: 5751237278259969611, guid: 0d5560ed5f67fec43b7bc7ce3a47fcea, type: 3}
   - {fileID: 7043897735675650382, guid: 153810004b700db46baff54285a71607, type: 3}
   hantuSO: []
+  tilemap: {fileID: 0}
 --- !u!114 &4177932657921632519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +317,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7af2e873a55060747aed6708e898274d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactPrompt: {fileID: 0}
+--- !u!114 &7947488690000055074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323959360444502071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4d2f3da6a4b96488ab141ff9c0e46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactPrompt: {fileID: 0}

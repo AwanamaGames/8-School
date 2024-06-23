@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63acf920512946e4a92a554ea5105cd7, type: 3}
+  m_Name: SoundEffect_Text
+  m_EditorClassIdentifier: 
+  soundEffectName: Text
+  soundPrefab: {fileID: 8398040468750061029, guid: fd827ede9a22b6d46b18d2bf971b0e17, type: 3}
+  soundEffectClip: {fileID: 8300000, guid: 3125b21d4c7edb244b71ee70419b56ae, type: 3}
+  soundEffectPitchRandomVariationMin: 0.8
+  soundEffectPitchRandomVariationMax: 1.2
+  soundEffectVolume: 0.5

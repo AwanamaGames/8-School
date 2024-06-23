@@ -41,6 +41,11 @@ public class SoundEffectDetailsSO : ScriptableObject
     public SoundEffectSO statUpgradeSoundEffect;
 
     #region Tooltip
+    [Tooltip("The sound effect when leaf not enough")]
+    #endregion Tooltip
+    public SoundEffectSO notEnoughLeafSoundEffect;
+
+    #region Tooltip
     [Tooltip("The sound effect when dialogue start")]
     #endregion Tooltip
     public SoundEffectSO gateSoundEffect;
@@ -49,6 +54,11 @@ public class SoundEffectDetailsSO : ScriptableObject
     [Tooltip("The sound effect when gate used")]
     #endregion Tooltip
     public SoundEffectSO dialogueSoundEffect;
+
+    #region Tooltip
+    [Tooltip("The sound effect when text is spread")]
+    #endregion Tooltip
+    public SoundEffectSO textSoundEffect;
 
     #region Header
     [Header("ENEMIES SOUND EFFECT")]
@@ -93,4 +103,21 @@ public class SoundEffectDetailsSO : ScriptableObject
     [Tooltip("The sound effect for tuyul defeat")]
     #endregion Tooltip
     public SoundEffectSO tuyulDefeatedSoundEffect;
+
+    #region Header
+    [Header("BOSS SOUND EFFECT")]
+    [Space(10)]
+    #endregion
+    #region Tooltip
+    [Tooltip("The sound effect for boss attack one")]
+    #endregion Tooltip
+    public SoundEffectSO bossAttackSoundEffectOne;
+    #region Tooltip
+    [Tooltip("The sound effect for boss attack two")]
+    #endregion Tooltip
+    public SoundEffectSO bossAttackSoundEffectTwo;
+    #region Tooltip
+    [Tooltip("The sound effect for boss defeat")]
+    #endregion Tooltip
+    public SoundEffectSO bossDefeatedSoundEffect;
 }

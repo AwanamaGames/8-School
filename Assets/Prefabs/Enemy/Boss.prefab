@@ -480,6 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a333c4586b66df74c95ab7b932d57906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffectDetails: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}
   isAgro: 0
   agent: {fileID: 0}
   isAttacking: 0

@@ -12,6 +12,8 @@ public class MusicManager : SingletonMonobehaviour<MusicManager>
     private Coroutine fadeOutMusicCoroutine;
     private Coroutine fadeInMusicCoroutine;
     public int musicVolume = 10;
+    private MusicTrackSO currentSceneMusicTrack;
+    private MusicTrackSO bossMusicTrack;
 
     protected override void Awake()
     {
@@ -47,11 +49,11 @@ public class MusicManager : SingletonMonobehaviour<MusicManager>
         while (true)
         {
             Scene currentScene = SceneManager.GetActiveScene();
-            MusicTrackSO musicTrack = GetMusicTrackForScene(currentScene.name);
+            currentSceneMusicTrack = GetMusicTrackForScene(currentScene.name);
 
-            if (musicTrack != null && musicAudioSource.clip != musicTrack.musicClip)
+            if (bossMusicTrack == null && currentSceneMusicTrack != null && musicAudioSource.clip != currentSceneMusicTrack.musicClip)
             {
-                PlayMusic(musicTrack);
+                PlayMusic(currentSceneMusicTrack);
                 Debug.Log("Music Track Detected for scene: " + currentScene.name);
             }
 
@@ -180,5 +182,20 @@ public class MusicManager : SingletonMonobehaviour<MusicManager>
             }
         }
         return null;
+    }
+
+    public void EnterBossRoom(MusicTrackSO bossMusic)
+    {
+        bossMusicTrack = bossMusic;
+        PlayMusic(bossMusicTrack);
+    }
+
+    public void ExitBossRoom()
+    {
+        bossMusicTrack = null;
+        if (currentSceneMusicTrack != null)
+        {
+            PlayMusic(currentSceneMusicTrack);
+        }
     }
 }

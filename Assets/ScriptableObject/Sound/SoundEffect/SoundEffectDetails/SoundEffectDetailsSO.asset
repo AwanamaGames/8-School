@@ -18,11 +18,16 @@ MonoBehaviour:
   playerDashSoundEffect: {fileID: 11400000, guid: f0a2235b1f5e3a84bb7d814c4a64e69c, type: 2}
   itemGetSoundEffect: {fileID: 11400000, guid: bfc39051a563e234ea5039355e953927, type: 2}
   statUpgradeSoundEffect: {fileID: 11400000, guid: b64e34ceb0d48634192738a8b031b2c0, type: 2}
+  notEnoughLeafSoundEffect: {fileID: 11400000, guid: f1d3185e224019843a85ffeb7bd263be, type: 2}
   gateSoundEffect: {fileID: 11400000, guid: cc82eaf3801696646a0518bfc4988772, type: 2}
   dialogueSoundEffect: {fileID: 11400000, guid: aa337854b529cd64a9cedc52d1a5644a, type: 2}
+  textSoundEffect: {fileID: 11400000, guid: 348e10f7297406d44989f637eb0c26ea, type: 2}
   pocongAttackSoundEffect: {fileID: 11400000, guid: 22041870bd9061e46aeddd19496deefe, type: 2}
   pocongDefeatedSoundEffect: {fileID: 11400000, guid: 8a809300eb93c9640a4bfaa68f6ea716, type: 2}
   kuntiAttackSoundEffect: {fileID: 11400000, guid: 5f4b0710a81b52143b355281deca086c, type: 2}
   kuntiDefeatedSoundEffect: {fileID: 11400000, guid: 622c78a653823d04aba17703dc4b53dc, type: 2}
   tuyulAttackSoundEffect: {fileID: 11400000, guid: d91186415085a684f92bf8f20f086ae6, type: 2}
   tuyulDefeatedSoundEffect: {fileID: 11400000, guid: c65ea1f9da12592428837b4cb7f418f7, type: 2}
+  bossAttackSoundEffectOne: {fileID: 11400000, guid: 097fcd496d1748e449a9eb9eae6dc755, type: 2}
+  bossAttackSoundEffectTwo: {fileID: 11400000, guid: b3023e6a1675b094891fef54d5939aa2, type: 2}
+  bossDefeatedSoundEffect: {fileID: 11400000, guid: fed36614b178a3846b9e93f352de0c97, type: 2}

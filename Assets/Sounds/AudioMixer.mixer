@@ -48,7 +48,7 @@ AudioMixerController:
     - 971236d4ab7b028428d2bf7b85616821
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 4022803807551746613}
+  m_TargetSnapshot: {fileID: 5694092527966839118}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -94,7 +94,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 721d357232816f341b66125b54368da8
   m_FloatValues:
-    f4c83cc701b927248ba412d215065bad: -20
+    f4c83cc701b927248ba412d215065bad: -30
   m_TransitionOverrides: {}
 --- !u!245 &4022803807551746613
 AudioMixerSnapshotController:
@@ -149,7 +149,8 @@ AudioMixerSnapshotController:
   m_Name: MusicLow
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 6b26d82e0a77ec146ada8407e5d45c68
-  m_FloatValues: {}
+  m_FloatValues:
+    f4c83cc701b927248ba412d215065bad: -20
   m_TransitionOverrides: {}
 --- !u!244 &6465191649761146195
 AudioMixerEffectController:

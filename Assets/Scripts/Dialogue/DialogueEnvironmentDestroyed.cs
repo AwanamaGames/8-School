@@ -53,6 +53,7 @@ public class DialogueEnvironmentDestroyed : MonoBehaviour
     private Transform defaultFollowTarget;
     private Transform defaultLookAtTarget;
     private float defaultOrthographicSize;
+    private AudioSource textSoundAudioSource;
 
     private void Start()
     {
@@ -64,6 +65,10 @@ public class DialogueEnvironmentDestroyed : MonoBehaviour
         defaultFollowTarget = virtualCamera.Follow;
         defaultLookAtTarget = virtualCamera.LookAt;
         defaultOrthographicSize = virtualCamera.m_Lens.OrthographicSize;
+
+        // Initialize AudioSource for text sound effect
+        textSoundAudioSource = gameObject.AddComponent<AudioSource>();
+        textSoundAudioSource.loop = true; // Loop the sound for continuous playback
     }
 
     private void Update()
@@ -82,6 +87,7 @@ public class DialogueEnvironmentDestroyed : MonoBehaviour
                 {
                     // Complete current letter-by-letter display immediately
                     StopCoroutine(displayCoroutine);
+                    StopTextSound();
                     Debug.Log("Full text ahead");
                     dialogueText.text = dialogueSentences[currentStep]; // Show full sentence
                     displayCoroutine = null;
@@ -135,6 +141,9 @@ public class DialogueEnvironmentDestroyed : MonoBehaviour
 
     private IEnumerator DisplayDialogueLetterByLetter(string sentence)
     {
+
+        PlayTextSound();
+
         isDisplayingSentence = true;
         dialogueText.text = "";
 
@@ -146,7 +155,26 @@ public class DialogueEnvironmentDestroyed : MonoBehaviour
 
         displayCoroutine = null; // Reset coroutine reference
         isDisplayingSentence = false;
+
+        StopTextSound();
     }
+
+    private void PlayTextSound()
+    {
+        if (soundEffectDetails.textSoundEffect != null)
+        {
+            textSoundAudioSource.clip = soundEffectDetails.textSoundEffect.soundEffectClip;
+            textSoundAudioSource.volume = soundEffectDetails.textSoundEffect.soundEffectVolume;
+            textSoundAudioSource.pitch = Random.Range(soundEffectDetails.textSoundEffect.soundEffectPitchRandomVariationMin, soundEffectDetails.textSoundEffect.soundEffectPitchRandomVariationMax);
+            textSoundAudioSource.Play();
+        }
+    }
+
+    private void StopTextSound()
+    {
+        textSoundAudioSource.Stop();
+    }
+
 
     private void AdvanceDialogue()
     {

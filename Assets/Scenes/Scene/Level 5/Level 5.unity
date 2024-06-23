@@ -5500,7 +5500,7 @@ MonoBehaviour:
   player: {fileID: 488537276}
   virtualCamera: {fileID: 815851207}
   cutsceneTarget: {fileID: 488537275}
-  zoomInOrthographicSize: 2
+  zoomInOrthographicSize: 2.5
   zoomTransitionTime: 0.3
   cameraMoveDamping: 1
 --- !u!1 &207730910
@@ -5618,6 +5618,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 79552436}
+  - {fileID: 1447854064}
   - {fileID: 1321787139}
   m_Father: {fileID: 1175389744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34764,7 +34765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4097330136178547665, guid: 2a821264474f1924491f53c1451d21d5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4109243817670649496, guid: 2a821264474f1924491f53c1451d21d5, type: 3}
       propertyPath: m_IsActive
@@ -34892,11 +34893,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8625766950969531876, guid: 2a821264474f1924491f53c1451d21d5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8625766950969531876, guid: 2a821264474f1924491f53c1451d21d5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8690511829352397440, guid: 2a821264474f1924491f53c1451d21d5, type: 3}
       propertyPath: m_IsActive
@@ -35531,8 +35532,8 @@ MonoBehaviour:
   - Player
   - Player
   dialogueSentences:
-  - Nice
-  - Gate to back to home
+  - At last....
+  - A Gate back to home
   portrait:
   - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
   - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
@@ -35542,7 +35543,7 @@ MonoBehaviour:
   player: {fileID: 488537276}
   virtualCamera: {fileID: 815851207}
   cutsceneTarget: {fileID: 1837472237}
-  zoomInOrthographicSize: 2
+  zoomInOrthographicSize: 2.5
   zoomTransitionTime: 0.3
   cameraMoveDamping: 1
 --- !u!4 &1321787139
@@ -35852,6 +35853,123 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactPrompt: {fileID: 787667378}
+--- !u!1 &1447854063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447854064}
+  - component: {fileID: 1447854066}
+  - component: {fileID: 1447854065}
+  m_Layer: 0
+  m_Name: StoryEvent_Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1447854064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447854063}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -70.57, y: 17.97, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 287074965}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1447854065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447854063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8ccf006c4867e4197a28672cf54be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffectDetails: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}
+  dialogueCanvas: {fileID: 488537281}
+  speakerText: {fileID: 488537280}
+  dialogueText: {fileID: 488537279}
+  portraitImage: {fileID: 488537278}
+  gameplayUICanvas: {fileID: 488537277}
+  speaker:
+  - Player
+  dialogueSentences:
+  - Something is approaching...
+  portrait:
+  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  cinematicBar: {fileID: 1594565948}
+  cinematicBarSize: 300
+  transitionTime: 0.3
+  player: {fileID: 488537276}
+  environmentObject: {fileID: 1719659954}
+  virtualCamera: {fileID: 815851207}
+  cutsceneTarget: {fileID: 488537275}
+  zoomInOrthographicSize: 2
+  zoomTransitionTime: 0.3
+  cameraMoveDamping: 1
+--- !u!60 &1447854066
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447854063}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.23509216, y: 2.704399}
+      - {x: -2.5379095, y: 1.1906011}
+      - {x: -1.4693694, y: -1.955078}
+      - {x: 1.3812119, y: -1.6906049}
+      - {x: 2.7730017, y: 0.6322631}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1536445730
 GameObject:
   m_ObjectHideFlags: 0
@@ -57234,6 +57352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 7947488690000055074, guid: a9ff6abf9bc0f43418ba93b606cbaa58, type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 787667378}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -65871,6 +65993,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1719659954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6323959360444502071, guid: a9ff6abf9bc0f43418ba93b606cbaa58, type: 3}
+  m_PrefabInstance: {fileID: 1565398841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1722731253
 GameObject:
   m_ObjectHideFlags: 0
@@ -82101,6 +82228,9 @@ MonoBehaviour:
   - triggerObject: {fileID: 79552435}
     actionType: 1
     spawnObject: {fileID: 940126049}
+  - triggerObject: {fileID: 940126049}
+    actionType: 0
+    spawnObject: {fileID: 1065770566}
   - triggerObject: {fileID: 1065770566}
     actionType: 0
     spawnObject: {fileID: 1445093430}
@@ -87374,6 +87504,101 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2046377407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2046377408}
+  - component: {fileID: 2046377410}
+  - component: {fileID: 2046377409}
+  m_Layer: 0
+  m_Name: BossRoomMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2046377408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046377407}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -101.859436, y: 59.973446, z: 0.3794064}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &2046377409
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046377407}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -11.758728, y: 1.7692604}
+      - {x: -17.676409, y: -16.469006}
+      - {x: 15.918093, y: -22.128582}
+      - {x: 21.721153, y: -3.7570877}
+  m_UseDelaunayMesh: 0
+--- !u!114 &2046377410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046377407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608dba4b06acf61458017c3fc9796580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossMusicTrack: {fileID: 11400000, guid: 4ef7cd4827f59764594aab8b6ec688a1, type: 2}
 --- !u!1001 &2013539478322855916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87512,5 +87737,6 @@ SceneRoots:
   - {fileID: 905836574}
   - {fileID: 1175389744}
   - {fileID: 408217866}
+  - {fileID: 2046377408}
   - {fileID: 229981353}
   - {fileID: 1300827616}

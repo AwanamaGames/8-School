@@ -54,6 +54,11 @@ public class PermanentUpgrade : MonoBehaviour, IInteractable
             }
             else
             {
+                if (soundEffectDetails.notEnoughLeafSoundEffect != null)
+                {
+                    SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.notEnoughLeafSoundEffect);
+                }
+
                 Debug.Log("Not enough leaves!");
             }
         }

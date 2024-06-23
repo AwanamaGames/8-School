@@ -8,6 +8,9 @@ using UnityEngine.UIElements;
 
 public class bossAttackManager : MonoBehaviour
 {
+
+    [SerializeField] private SoundEffectDetailsSO soundEffectDetails;
+
     public bool isAgro;
     public NavMeshAgent agent;
     GameObject player;
@@ -98,7 +101,13 @@ public class bossAttackManager : MonoBehaviour
     }
 
     async void rangeAttack()
-    {   
+    {
+
+        if (soundEffectDetails.bossAttackSoundEffectTwo != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.bossAttackSoundEffectTwo);
+        }
+
         isAttacking = true;
         agent.SetDestination(bossRoom.center.position);
         agent.SetDestination(this.transform.position);
@@ -139,7 +148,13 @@ public class bossAttackManager : MonoBehaviour
     }
 
     public async void attack()
-    {   
+    {
+
+        if (soundEffectDetails.bossAttackSoundEffectOne != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(soundEffectDetails.bossAttackSoundEffectOne);
+        }
+
         isAttacking = true;
         agent.speed *= 5;
         bossMovement.MoveRightLeft1();
