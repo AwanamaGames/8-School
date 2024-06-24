@@ -15,7 +15,7 @@ MonoBehaviour:
   maxHP: 60
   currentHP: 60
   att: 15
-  movSpd: 1
+  movSpd: 5
   attSpd: 1
   def: 0
   isAgro: 0

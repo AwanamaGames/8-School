@@ -15,8 +15,8 @@ MonoBehaviour:
   maxHP: 110
   currentHP: 110
   att: 50
-  movSpd: 10
+  movSpd: 4
   attSpd: 1
-  def: 10
+  def: 70
   isAgro: 0
   leaf: 0
