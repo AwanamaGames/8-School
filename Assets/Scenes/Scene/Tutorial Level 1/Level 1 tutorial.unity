@@ -584,7 +584,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
+    oldSize: {x: 1.5625, y: 1.5625}
     newSize: {x: 6.4, y: 6.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -666,7 +666,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 77ed6493067fab8419e5d7092ccd3fee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f895075a2fa8da94cbc619c27a57c4c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -687,7 +687,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.72, y: -0.61, z: 0.24437365}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1507698760}
@@ -6438,17 +6438,33 @@ PrefabInstance:
       propertyPath: interactPrompt
       value: 
       objectReference: {fileID: 1083209120}
+    - target: {fileID: 5941825818489502113, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e7cf49eb447c8ed4c83845633696032f, type: 3}
     - target: {fileID: 6476235853222864726, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
       propertyPath: soundEffectDetails
       value: 
       objectReference: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}
     - target: {fileID: 7242173785531032340, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242173785531032340, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242173785531032340, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.092
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242173785531032340, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.27
+      value: -6.57
       objectReference: {fileID: 0}
     - target: {fileID: 7242173785531032340, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.42
+      value: 16.89
       objectReference: {fileID: 0}
     - target: {fileID: 7242173785531032340, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6485,6 +6501,30 @@ PrefabInstance:
     - target: {fileID: 7253285527686958314, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
       propertyPath: m_Name
       value: Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286447476178786028, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
+      propertyPath: m_Size.x
+      value: 3.113439
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286447476178786028, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
+      propertyPath: m_Size.y
+      value: 3.0853615
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286447476178786028, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03542185
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286447476178786028, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.22141075
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286447476178786028, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286447476178786028, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7306424908361629331, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
       propertyPath: speakerText

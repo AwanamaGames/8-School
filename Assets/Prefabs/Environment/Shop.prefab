@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 77ed6493067fab8419e5d7092ccd3fee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e7cf49eb447c8ed4c83845633696032f, type: 3}
   m_Color: {r: 0.6754716, g: 0.43204695, b: 0.43204695, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af2e873a55060747aed6708e898274d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPrompt: {fileID: 0}
 --- !u!61 &7286447476178786028
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -132,18 +133,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3742652, y: -0.022368193}
+  m_Offset: {x: -0.22222733, y: -0.13714933}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
+    oldSize: {x: 2, y: 2.5}
     newSize: {x: 6.4, y: 6.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.599278, y: 12.969793}
+  m_Size: {x: 4.044479, y: 3.3929777}
   m_EdgeRadius: 0
 --- !u!114 &6476235853222864726
 MonoBehaviour:
@@ -157,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66086276f085e4f41a3068a8d8b9226a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundEffectDetails: {fileID: 0}
   attackUpgrade: {fileID: 11400000, guid: f7b55486af7c94248af8248587646e7d, type: 2}
   maxHPUpgrade: {fileID: 11400000, guid: f9f5be6697fdeb045b5cd23380f89472, type: 2}
   defenseUpgrade: {fileID: 11400000, guid: 610ef7c06407ee9489a84270dc802eed, type: 2}
