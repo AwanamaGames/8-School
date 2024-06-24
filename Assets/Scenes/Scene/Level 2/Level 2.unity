@@ -1459,7 +1459,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &488537278 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7041924355744130861, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6345196395437737568, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
   m_PrefabInstance: {fileID: 488537274}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -21633,7 +21633,7 @@ MonoBehaviour:
   dialogueSentences:
   - Something is approaching...
   portrait:
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
   cinematicBar: {fileID: 0}
   cinematicBarSize: 300
   transitionTime: 0.3

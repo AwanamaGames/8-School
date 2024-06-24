@@ -132,6 +132,7 @@ public class Dialogue : MonoBehaviour
         StartCoroutine(ZoomCamera(zoomInOrthographicSize, zoomTransitionTime));
 
         // Initialize dialogue text display
+        portraitImage.sprite = portrait[currentStep];
         speakerText.text = speaker[currentStep];
         displayCoroutine = StartCoroutine(DisplayDialogueLetterByLetter(dialogueSentences[currentStep]));
     }
@@ -176,6 +177,7 @@ public class Dialogue : MonoBehaviour
         currentStep++;
         if (currentStep < speaker.Length)
         {
+            portraitImage.sprite = portrait[currentStep];
             speakerText.text = speaker[currentStep];
             displayCoroutine = StartCoroutine(DisplayDialogueLetterByLetter(dialogueSentences[currentStep]));
         }

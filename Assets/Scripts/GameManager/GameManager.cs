@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        scenes = new List<string> { "MainMenu", "Level 1 tutorial", "Level 1", "Level 2", "Level 3", "Level 4", "Level 5" };
+        scenes = new List<string> { "MainMenu", "IntroScene", "Level 1 tutorial", "Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "EndScene" };
         currentLevel = 0;
-        ChangeState(GameState.Tutorial);
+        ChangeState(GameState.MainMenu);
     }
 
     private void Update()
@@ -64,6 +64,12 @@ public class GameManager : MonoBehaviour
         currentState = newState;
         switch (newState)
         {
+            case GameState.MainMenu:
+                GoToMainMenu();
+                break;
+            case GameState.Intro:
+                StartIntro();
+                break;
             case GameState.Tutorial:
                 StartTutorial();
                 break;
@@ -82,11 +88,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void GoToMainMenu()
+    {
+        currentLevel = 0;
+        StartCoroutine(PlayWithTransition(currentLevel));
+    }
+
+    private void StartIntro()
+    {
+        currentLevel = 1; // IntroScene
+        StartCoroutine(PlayWithTransition(currentLevel));
+    }
+
     private void StartTutorial()
     {
         gameplaySO = Instantiate(defaultStatSO);
         gameplaySO.leaf = 0;
-        currentLevel = 1;
+        currentLevel = 2; // Level 1 tutorial
         StartCoroutine(PlayWithTransition(currentLevel));
     }
 
@@ -94,7 +112,7 @@ public class GameManager : MonoBehaviour
     {
         gameplaySO = Instantiate(defaultStatSO);
         gameplaySO.currentHP = gameplaySO.maxHP;
-        currentLevel = 6;
+        currentLevel = 3; // Start at Level 1
         StartCoroutine(PlayWithTransition(currentLevel));
     }
 
@@ -165,18 +183,15 @@ public class GameManager : MonoBehaviour
         progressSO = Instantiate(gameplaySO);
         Debug.Log("Progress saved.");
     }
+}
 
-    //public void LoadProgress()
-    //{
-    //    if (progressSO != null)
-    //    {
-    //        gameplaySO = Instantiate(progressSO);
-    //        Play(currentLevel);
-    //        Debug.Log("Progress loaded.");
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("No saved progress found.");
-    //    }
-    //}
+public enum GameState
+{
+    MainMenu,
+    Intro,
+    Tutorial,
+    NewGame,
+    GameLose,
+    LevelComplete,
+    GameWin
 }

@@ -4909,7 +4909,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 4968959003044526015}
   speakerText: {fileID: 4968959003044526014}
   dialogueText: {fileID: 4968959003044526013}
-  portraitImage: {fileID: 4968959003044526012}
+  portraitImage: {fileID: 838391908}
   gameplayUICanvas: {fileID: 4968959003044526011}
   speaker:
   - Necklace
@@ -4921,9 +4921,9 @@ MonoBehaviour:
   - from now on I would only channel my power to your martial arts and stay dormant.
     Good luck!
   portrait:
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
   cinematicBar: {fileID: 4968959003044526010}
   cinematicBarSize: 300
   transitionTime: 0.3
@@ -4982,7 +4982,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 4968959003044526015}
   speakerText: {fileID: 4968959003044526014}
   dialogueText: {fileID: 4968959003044526013}
-  portraitImage: {fileID: 4968959003044526012}
+  portraitImage: {fileID: 838391908}
   gameplayUICanvas: {fileID: 4968959003044526011}
   speaker:
   - Necklace
@@ -4997,11 +4997,11 @@ MonoBehaviour:
   - For now, use your martial arts skill to fight the ghost.
   - I will channel my power to your martial arts move!
   portrait:
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
   cinematicBar: {fileID: 4968959003044526010}
   cinematicBarSize: 300
   transitionTime: 0.3
@@ -5164,7 +5164,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 4968959003044526015}
   speakerText: {fileID: 4968959003044526014}
   dialogueText: {fileID: 4968959003044526013}
-  portraitImage: {fileID: 4968959003044526012}
+  portraitImage: {fileID: 838391908}
   gameplayUICanvas: {fileID: 4968959003044526011}
   speaker:
   - Player
@@ -5173,8 +5173,8 @@ MonoBehaviour:
   - W-What!?
   - ......
   portrait:
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
   cinematicBar: {fileID: 4968959003044526010}
   cinematicBarSize: 300
   transitionTime: 0.3
@@ -5692,6 +5692,17 @@ Transform:
   - {fileID: 1787519709}
   m_Father: {fileID: 1084730239}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &838391908 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6345196395437737568, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
+  m_PrefabInstance: {fileID: 4968959003044526009}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &839000998
 GameObject:
   m_ObjectHideFlags: 0
@@ -6124,7 +6135,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 4968959003044526015}
   speakerText: {fileID: 4968959003044526014}
   dialogueText: {fileID: 4968959003044526013}
-  portraitImage: {fileID: 4968959003044526012}
+  portraitImage: {fileID: 838391908}
   gameplayUICanvas: {fileID: 4968959003044526011}
   speaker:
   - Necklace
@@ -6135,8 +6146,8 @@ MonoBehaviour:
   - "I can\u2019t guide you, you should do the things I explained earlier to escape
     from this place."
   portrait:
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
   cinematicBar: {fileID: 4968959003044526010}
   cinematicBarSize: 300
   transitionTime: 0.3
@@ -6194,7 +6205,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 4968959003044526015}
   speakerText: {fileID: 4968959003044526014}
   dialogueText: {fileID: 4968959003044526013}
-  portraitImage: {fileID: 4968959003044526012}
+  portraitImage: {fileID: 838391908}
   gameplayUICanvas: {fileID: 4968959003044526011}
   speaker:
   - Necklace
@@ -6203,8 +6214,8 @@ MonoBehaviour:
   - Wait, we should get back to the earlier place.
   - "Huh? Okay\u2026"
   portrait:
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
   cinematicBar: {fileID: 4968959003044526010}
   cinematicBarSize: 300
   transitionTime: 0.3
@@ -6360,14 +6371,14 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 4968959003044526015}
   speakerText: {fileID: 4968959003044526014}
   dialogueText: {fileID: 4968959003044526013}
-  portraitImage: {fileID: 4968959003044526012}
+  portraitImage: {fileID: 838391908}
   gameplayUICanvas: {fileID: 4968959003044526011}
   speaker:
   - Necklace
   dialogueSentences:
   - It's another gate, but this one may teleport you to somewhere else...
   portrait:
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
   cinematicBar: {fileID: 4968959003044526010}
   cinematicBarSize: 300
   transitionTime: 0.3
@@ -6486,7 +6497,7 @@ PrefabInstance:
     - target: {fileID: 7306424908361629331, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
       propertyPath: portraitImage
       value: 
-      objectReference: {fileID: 4968959003044526012}
+      objectReference: {fileID: 0}
     - target: {fileID: 7306424908361629331, guid: 60245bfbb0b249f4aae448768ddf18de, type: 3}
       propertyPath: dialogueCanvas
       value: 
@@ -6670,7 +6681,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 4968959003044526015}
   speakerText: {fileID: 4968959003044526014}
   dialogueText: {fileID: 4968959003044526013}
-  portraitImage: {fileID: 4968959003044526012}
+  portraitImage: {fileID: 838391908}
   gameplayUICanvas: {fileID: 4968959003044526011}
   speaker:
   - Player
@@ -6689,11 +6700,11 @@ MonoBehaviour:
 
 '
   portrait:
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
   cinematicBar: {fileID: 4968959003044526010}
   cinematicBarSize: 300
   transitionTime: 0.3
@@ -7983,14 +7994,14 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 4968959003044526015}
   speakerText: {fileID: 4968959003044526014}
   dialogueText: {fileID: 4968959003044526013}
-  portraitImage: {fileID: 4968959003044526012}
+  portraitImage: {fileID: 838391908}
   gameplayUICanvas: {fileID: 4968959003044526011}
   speaker:
   - Player
   dialogueSentences:
   - Honesty Canteen...
   portrait:
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
   cinematicBar: {fileID: 4968959003044526010}
   cinematicBarSize: 300
   transitionTime: 0.3
@@ -8100,7 +8111,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 4968959003044526015}
   speakerText: {fileID: 4968959003044526014}
   dialogueText: {fileID: 4968959003044526013}
-  portraitImage: {fileID: 4968959003044526012}
+  portraitImage: {fileID: 838391908}
   gameplayUICanvas: {fileID: 4968959003044526011}
   speaker:
   - Necklace
@@ -8113,10 +8124,10 @@ MonoBehaviour:
   - But looks like its retreating for now....
   - Let's search for another gate, there's must be one!
   portrait:
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
   cinematicBar: {fileID: 4968959003044526010}
   cinematicBarSize: 300
   transitionTime: 0.3
@@ -8241,7 +8252,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 4968959003044526015}
   speakerText: {fileID: 4968959003044526014}
   dialogueText: {fileID: 4968959003044526013}
-  portraitImage: {fileID: 4968959003044526012}
+  portraitImage: {fileID: 838391908}
   gameplayUICanvas: {fileID: 4968959003044526011}
   speaker:
   - Player
@@ -8250,8 +8261,8 @@ MonoBehaviour:
   - This gate? What should I do about it?
   - Try to imagine opening an ordinary gate and I will take care of the rest.
   portrait:
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
   cinematicBar: {fileID: 4968959003044526010}
   cinematicBarSize: 300
   transitionTime: 0.3
@@ -8358,7 +8369,7 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 4968959003044526015}
   speakerText: {fileID: 4968959003044526014}
   dialogueText: {fileID: 4968959003044526013}
-  portraitImage: {fileID: 4968959003044526012}
+  portraitImage: {fileID: 838391908}
   gameplayUICanvas: {fileID: 4968959003044526011}
   speaker:
   - Player
@@ -8395,18 +8406,18 @@ MonoBehaviour:
     power as much as you can so you can get more powerful.
   - Now go to that gate that you can see from here!
   portrait:
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
-  - {fileID: 21300000, guid: b1673c7b3d777e24289f3ce41ebea90a, type: 3}
+  - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
+  - {fileID: 21300000, guid: c1bdabc9e64eeab4faba44e750e93e7c, type: 3}
   cinematicBar: {fileID: 4968959003044526010}
   cinematicBarSize: 300
   transitionTime: 0.3
@@ -8883,6 +8894,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -75
       objectReference: {fileID: 0}
+    - target: {fileID: 347666260176209447, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 413626003618788364, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
       propertyPath: soundEffectDetails
       value: 
@@ -8926,6 +8941,10 @@ PrefabInstance:
     - target: {fileID: 5203307187631313417, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117033539286046218, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6422184798878233036, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9008,17 +9027,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7716375025092268338, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
   m_PrefabInstance: {fileID: 4968959003044526009}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4968959003044526012 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7041924355744130861, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
-  m_PrefabInstance: {fileID: 4968959003044526009}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4968959003044526013 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6419150031736861217, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}

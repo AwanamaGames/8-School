@@ -150,6 +150,7 @@ public class DialogueEnemy : MonoBehaviour
 
         // Initialize dialogue text display
         speakerText.text = speaker[currentStep];
+        portraitImage.sprite = portrait[currentStep];
         displayCoroutine = StartCoroutine(DisplayDialogueLetterByLetter(dialogueSentences[currentStep]));
     }
 
@@ -195,6 +196,7 @@ public class DialogueEnemy : MonoBehaviour
         if (currentStep < speaker.Length)
         {
             speakerText.text = speaker[currentStep];
+            portraitImage.sprite = portrait[currentStep];
             displayCoroutine = StartCoroutine(DisplayDialogueLetterByLetter(dialogueSentences[currentStep]));
         }
         else
