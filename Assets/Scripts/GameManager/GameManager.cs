@@ -40,23 +40,23 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         // Hotkeys for testing
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            ChangeState(GameState.GameLose);
-            Debug.Log("Game Lose triggered");
-        }
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{
+        //    ChangeState(GameState.GameLose);
+        //    Debug.Log("Game Lose triggered");
+        //}
 
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ChangeState(GameState.LevelComplete);
-            Debug.Log("Level Complete triggered");
-        }
+        //if (Input.GetKeyDown(KeyCode.C))
+        //{
+        //    ChangeState(GameState.LevelComplete);
+        //    Debug.Log("Level Complete triggered");
+        //}
 
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            ChangeState(GameState.NewGame);
-            Debug.Log("New Game triggered");
-        }
+        //if (Input.GetKeyDown(KeyCode.N))
+        //{
+        //    ChangeState(GameState.NewGame);
+        //    Debug.Log("New Game triggered");
+        //}
     }
 
     public void ChangeState(GameState newState)
