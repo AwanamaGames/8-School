@@ -6,7 +6,6 @@ using JetBrains.Annotations;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 [System.Serializable]
 public abstract class Item
