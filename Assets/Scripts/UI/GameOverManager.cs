@@ -28,6 +28,10 @@ public class GameOverManager : MonoBehaviour
 
     private void OnContinueButtonClicked()
     {
+        if (GameManager.Instance.progressSO != null)
+        {
+            GameManager.Instance.progressSO.leaf = 0;
+        }
         GameManager.Instance.gameplaySO.leaf = 0;
         GameManager.Instance.gameplaySO.currentHP = GameManager.Instance.defaultStatSO.currentHP;
 
@@ -40,6 +44,10 @@ public class GameOverManager : MonoBehaviour
 
     private void OnMainMenuButtonClicked()
     {
+        if (GameManager.Instance.progressSO != null)
+        {
+            GameManager.Instance.progressSO.leaf = 0;
+        }
         GameManager.Instance.gameplaySO.leaf = 0;
         GameManager.Instance.gameplaySO.currentHP = GameManager.Instance.defaultStatSO.currentHP;
 

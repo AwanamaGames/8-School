@@ -399,7 +399,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 351642386639424585, guid: 0a68be1bd13d8694e8d8fe85574ac075, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: Leaf and Item will be reset upon death
+      value: Leaf and Item will be reset upon death while permanent stats upgrade
+        saved
       objectReference: {fileID: 0}
     - target: {fileID: 351642386639424591, guid: 0a68be1bd13d8694e8d8fe85574ac075, type: 3}
       propertyPath: m_Color.b

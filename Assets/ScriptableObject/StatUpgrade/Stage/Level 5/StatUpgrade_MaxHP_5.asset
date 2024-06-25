@@ -15,4 +15,4 @@ MonoBehaviour:
   upgradeName: MAXHP UP
   statType: 1
   price: 50
-  upgradeAmount: 25
+  upgradeAmount: 50

@@ -238,7 +238,7 @@ MonoBehaviour:
   cinematicBarSize: 300
   transitionTime: 0.3
   player: {fileID: 1782963891}
-  environmentObject: {fileID: 0}
+  environmentObject: {fileID: 709747016}
   virtualCamera: {fileID: 815851207}
   cutsceneTarget: {fileID: 488537275}
   zoomInOrthographicSize: 2.5
@@ -342,15 +342,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4177932657921632519, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 488537276}
     - target: {fileID: 6323959360444502071, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
       propertyPath: m_Name
       value: spawner 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7947488690000055074, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 488537276}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+--- !u!1 &88833706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6323959360444502071, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+  m_PrefabInstance: {fileID: 88833705}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &109272850
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,7 +628,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -630,38 +643,44 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.8, y: 1.7}
-      - {x: 2.5, y: 2.1000001}
-      - {x: 2.1000001, y: 2.5}
-      - {x: 1.7, y: 2.8}
-      - {x: 1.3000001, y: 3}
-      - {x: 0.8, y: 3.2}
-      - {x: -0.8, y: 3.2}
-      - {x: -1.3000001, y: 3}
-      - {x: -1.7, y: 2.8}
-      - {x: -2.1000001, y: 2.5}
-      - {x: -2.5, y: 2.1000001}
-      - {x: -2.8, y: 1.7}
-      - {x: -3, y: 1.3000001}
-      - {x: -3.2, y: 0.8}
-      - {x: -3.2, y: -0.8}
-      - {x: -3, y: -1.3000001}
-      - {x: -2.8, y: -1.7}
-      - {x: -2.5, y: -2.1000001}
-      - {x: -2.1000001, y: -2.5}
-      - {x: -1.7, y: -2.8}
-      - {x: -1.3000001, y: -3}
-      - {x: -0.8, y: -3.2}
-      - {x: 0.8, y: -3.2}
-      - {x: 1.3000001, y: -3}
-      - {x: 1.7, y: -2.8}
-      - {x: 2.1000001, y: -2.5}
-      - {x: 2.5, y: -2.1000001}
-      - {x: 2.8, y: -1.7}
-      - {x: 3, y: -1.3000001}
-      - {x: 3.2, y: -0.8}
-      - {x: 3.2, y: 0.8}
-      - {x: 3, y: 1.3000001}
+    - - {x: 0.453125, y: 0.03125}
+      - {x: 0.0625, y: 0.609375}
+      - {x: -0.078125, y: 0.625}
+      - {x: -0.421875, y: 0.625}
+      - {x: -0.484375, y: 0.546875}
+      - {x: -0.515625, y: 0.4375}
+      - {x: -0.515625, y: 0.078125}
+      - {x: -0.390625, y: -0.1875}
+      - {x: -0.15625, y: -0.484375}
+      - {x: 0.125, y: -0.78125}
+      - {x: 0.265625, y: -0.78125}
+      - {x: 0.390625, y: -0.671875}
+      - {x: 0.453125, y: -0.359375}
+    - - {x: 0.09375, y: -0.421875}
+      - {x: 0.09375, y: -0.4375}
+      - {x: 0.125, y: -0.46875}
+      - {x: 0.125, y: -0.453125}
+    - - {x: 0.09375, y: 0.046875}
+      - {x: 0.046875, y: 0.140625}
+      - {x: 0.015625, y: 0.171875}
+      - {x: -0.09375, y: 0.21875}
+      - {x: -0.109375, y: 0.21875}
+      - {x: -0.1875, y: 0.296875}
+      - {x: -0.203125, y: 0.296875}
+      - {x: -0.234375, y: 0.328125}
+      - {x: -0.296875, y: 0.328125}
+      - {x: -0.28125, y: 0.34375}
+      - {x: -0.265625, y: 0.34375}
+      - {x: -0.1875, y: 0.265625}
+      - {x: -0.171875, y: 0.265625}
+      - {x: -0.140625, y: 0.234375}
+      - {x: -0.125, y: 0.234375}
+      - {x: -0.109375, y: 0.203125}
+      - {x: -0.046875, y: 0.171875}
+      - {x: 0.0625, y: 0.078125}
+      - {x: 0.0625, y: 0.0625}
+      - {x: 0.125, y: 0.015625}
+      - {x: 0.109375, y: 0.046875}
   m_UseDelaunayMesh: 0
 --- !u!212 &151590148
 SpriteRenderer:
@@ -33915,15 +33934,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4177932657921632519, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 488537276}
     - target: {fileID: 6323959360444502071, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
       propertyPath: m_Name
       value: spawner 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7947488690000055074, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 488537276}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+--- !u!1 &709747016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6323959360444502071, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+  m_PrefabInstance: {fileID: 709747015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &714209306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53207,7 +53239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolArray:
-  - poolSize: 30
+  - poolSize: 50
     prefab: {fileID: 8398040468750061029, guid: fd827ede9a22b6d46b18d2bf971b0e17, type: 3}
     componentType: SoundEffect
 --- !u!1001 &922044997
@@ -72499,7 +72531,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -72514,38 +72546,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.8, y: 1.7}
-      - {x: 2.5, y: 2.1000001}
-      - {x: 2.1000001, y: 2.5}
-      - {x: 1.7, y: 2.8}
-      - {x: 1.3000001, y: 3}
-      - {x: 0.8, y: 3.2}
-      - {x: -0.8, y: 3.2}
-      - {x: -1.3000001, y: 3}
-      - {x: -1.7, y: 2.8}
-      - {x: -2.1000001, y: 2.5}
-      - {x: -2.5, y: 2.1000001}
-      - {x: -2.8, y: 1.7}
-      - {x: -3, y: 1.3000001}
-      - {x: -3.2, y: 0.8}
-      - {x: -3.2, y: -0.8}
-      - {x: -3, y: -1.3000001}
-      - {x: -2.8, y: -1.7}
-      - {x: -2.5, y: -2.1000001}
-      - {x: -2.1000001, y: -2.5}
-      - {x: -1.7, y: -2.8}
-      - {x: -1.3000001, y: -3}
-      - {x: -0.8, y: -3.2}
-      - {x: 0.8, y: -3.2}
-      - {x: 1.3000001, y: -3}
-      - {x: 1.7, y: -2.8}
-      - {x: 2.1000001, y: -2.5}
-      - {x: 2.5, y: -2.1000001}
-      - {x: 2.8, y: -1.7}
-      - {x: 3, y: -1.3000001}
-      - {x: 3.2, y: -0.8}
-      - {x: 3.2, y: 0.8}
-      - {x: 3, y: 1.3000001}
+    - - {x: 0.078125, y: 0.671875}
+      - {x: -0.109375, y: 0.671875}
+      - {x: -0.265625, y: 0.4375}
+      - {x: -0.28125, y: 0.390625}
+      - {x: -0.28125, y: -0.578125}
+      - {x: -0.265625, y: -0.671875}
+      - {x: 0.203125, y: -0.671875}
+      - {x: 0.28125, y: -0.625}
+      - {x: 0.28125, y: 0.125}
+      - {x: 0.265625, y: 0.4375}
   m_UseDelaunayMesh: 0
 --- !u!212 &1148809566
 SpriteRenderer:
@@ -72927,15 +72937,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4177932657921632519, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 488537276}
     - target: {fileID: 6323959360444502071, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
       propertyPath: m_Name
       value: spawner 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7947488690000055074, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 488537276}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+--- !u!1 &1467688985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6323959360444502071, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+  m_PrefabInstance: {fileID: 1467688984}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1519803128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73691,7 +73714,7 @@ MonoBehaviour:
   cinematicBarSize: 300
   transitionTime: 0.3
   player: {fileID: 1782963891}
-  environmentObject: {fileID: 0}
+  environmentObject: {fileID: 88833706}
   virtualCamera: {fileID: 815851207}
   cutsceneTarget: {fileID: 488537275}
   zoomInOrthographicSize: 2.5
@@ -74587,7 +74610,7 @@ MonoBehaviour:
   cinematicBarSize: 300
   transitionTime: 0.3
   player: {fileID: 1782963891}
-  environmentObject: {fileID: 0}
+  environmentObject: {fileID: 1467688985}
   virtualCamera: {fileID: 815851207}
   cutsceneTarget: {fileID: 488537275}
   zoomInOrthographicSize: 2.5

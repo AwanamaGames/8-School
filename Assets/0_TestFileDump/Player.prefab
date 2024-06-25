@@ -2957,7 +2957,6 @@ MonoBehaviour:
   healthBar: {fileID: 8909505906678285071}
   stat: {fileID: 0}
   LeafCounter: {fileID: 6890479240561428778}
-  items: []
   isDoubleLeafActive: 0
 --- !u!50 &9191837764114053906
 Rigidbody2D:
@@ -3053,7 +3052,7 @@ MonoBehaviour:
   body: {fileID: 9191837764114053906}
   movSpeed: 2.5
   dashDuration: 0.25
-  dashSpeed: 1.75
+  dashSpeed: 2.25
   dashCooldown: 1
   isDashCooldown: 0
   soundEffectDetails: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}

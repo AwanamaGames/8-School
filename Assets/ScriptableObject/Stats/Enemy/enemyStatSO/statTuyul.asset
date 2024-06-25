@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 60
   currentHP: 60
-  att: 15
+  att: 60
   movSpd: 5
   attSpd: 1
   def: 0

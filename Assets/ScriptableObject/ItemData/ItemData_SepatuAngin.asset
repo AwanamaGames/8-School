@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b983936b33de1724da45f3e3fa3fe199, type: 3}
-  m_Name: ItemData_IncreaseDef
+  m_Name: ItemData_SepatuAngin
   m_EditorClassIdentifier: 
-  itemName: Increase Def
-  itemIcon: {fileID: 21300000, guid: 77ed6493067fab8419e5d7092ccd3fee, type: 3}
+  itemName: SepatuAngin
+  itemIcon: {fileID: 21300000, guid: 69efdcd07fb80a9479c4ce3f09f46a0e, type: 3}

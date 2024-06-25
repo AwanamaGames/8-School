@@ -788,15 +788,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4177932657921632519, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 488537276}
     - target: {fileID: 6323959360444502071, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
       propertyPath: m_Name
       value: spawner 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7947488690000055074, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+      propertyPath: interactPrompt
+      value: 
+      objectReference: {fileID: 488537276}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+--- !u!1 &231497383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6323959360444502071, guid: 52afbc6e3d1de3044bab3a7459a274cd, type: 3}
+  m_PrefabInstance: {fileID: 231497382}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &241349213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,7 +1021,7 @@ GameObject:
   - component: {fileID: 274746155}
   - component: {fileID: 274746154}
   m_Layer: 0
-  m_Name: DoubleLeaf
+  m_Name: JubahHitam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1024,7 +1037,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 45.73, y: 43.09, z: 0.24437365}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 241349214}
@@ -1055,7 +1068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundEffectDetails: {fileID: 11400000, guid: e77f30be04a97dd4ea5cab3ef06a3b5a, type: 2}
-  itemDrop: 6
+  itemDrop: 0
   stat: {fileID: 0}
   price: 50
 --- !u!60 &274746156
@@ -1087,14 +1100,14 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
+    oldSize: {x: 1.5625, y: 1.5625}
     newSize: {x: 6.4, y: 6.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1102,38 +1115,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.8, y: 1.7}
-      - {x: 2.5, y: 2.1000001}
-      - {x: 2.1000001, y: 2.5}
-      - {x: 1.7, y: 2.8}
-      - {x: 1.3000001, y: 3}
-      - {x: 0.8, y: 3.2}
-      - {x: -0.8, y: 3.2}
-      - {x: -1.3000001, y: 3}
-      - {x: -1.7, y: 2.8}
-      - {x: -2.1000001, y: 2.5}
-      - {x: -2.5, y: 2.1000001}
-      - {x: -2.8, y: 1.7}
-      - {x: -3, y: 1.3000001}
-      - {x: -3.2, y: 0.8}
-      - {x: -3.2, y: -0.8}
-      - {x: -3, y: -1.3000001}
-      - {x: -2.8, y: -1.7}
-      - {x: -2.5, y: -2.1000001}
-      - {x: -2.1000001, y: -2.5}
-      - {x: -1.7, y: -2.8}
-      - {x: -1.3000001, y: -3}
-      - {x: -0.8, y: -3.2}
-      - {x: 0.8, y: -3.2}
-      - {x: 1.3000001, y: -3}
-      - {x: 1.7, y: -2.8}
-      - {x: 2.1000001, y: -2.5}
-      - {x: 2.5, y: -2.1000001}
-      - {x: 2.8, y: -1.7}
-      - {x: 3, y: -1.3000001}
-      - {x: 3.2, y: -0.8}
-      - {x: 3.2, y: 0.8}
-      - {x: 3, y: 1.3000001}
+    - - {x: 0.078125, y: 0.671875}
+      - {x: -0.109375, y: 0.671875}
+      - {x: -0.265625, y: 0.4375}
+      - {x: -0.28125, y: 0.390625}
+      - {x: -0.28125, y: -0.578125}
+      - {x: -0.265625, y: -0.671875}
+      - {x: 0.203125, y: -0.671875}
+      - {x: 0.28125, y: -0.625}
+      - {x: 0.28125, y: 0.125}
+      - {x: 0.265625, y: 0.4375}
   m_UseDelaunayMesh: 0
 --- !u!212 &274746157
 SpriteRenderer:
@@ -1176,8 +1167,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 77ed6493067fab8419e5d7092ccd3fee, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f895075a2fa8da94cbc619c27a57c4c0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14297,7 +14288,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14312,38 +14303,44 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.8, y: 1.7}
-      - {x: 2.5, y: 2.1000001}
-      - {x: 2.1000001, y: 2.5}
-      - {x: 1.7, y: 2.8}
-      - {x: 1.3000001, y: 3}
-      - {x: 0.8, y: 3.2}
-      - {x: -0.8, y: 3.2}
-      - {x: -1.3000001, y: 3}
-      - {x: -1.7, y: 2.8}
-      - {x: -2.1000001, y: 2.5}
-      - {x: -2.5, y: 2.1000001}
-      - {x: -2.8, y: 1.7}
-      - {x: -3, y: 1.3000001}
-      - {x: -3.2, y: 0.8}
-      - {x: -3.2, y: -0.8}
-      - {x: -3, y: -1.3000001}
-      - {x: -2.8, y: -1.7}
-      - {x: -2.5, y: -2.1000001}
-      - {x: -2.1000001, y: -2.5}
-      - {x: -1.7, y: -2.8}
-      - {x: -1.3000001, y: -3}
-      - {x: -0.8, y: -3.2}
-      - {x: 0.8, y: -3.2}
-      - {x: 1.3000001, y: -3}
-      - {x: 1.7, y: -2.8}
-      - {x: 2.1000001, y: -2.5}
-      - {x: 2.5, y: -2.1000001}
-      - {x: 2.8, y: -1.7}
-      - {x: 3, y: -1.3000001}
-      - {x: 3.2, y: -0.8}
-      - {x: 3.2, y: 0.8}
-      - {x: 3, y: 1.3000001}
+    - - {x: 0.453125, y: 0.03125}
+      - {x: 0.0625, y: 0.609375}
+      - {x: -0.078125, y: 0.625}
+      - {x: -0.421875, y: 0.625}
+      - {x: -0.484375, y: 0.546875}
+      - {x: -0.515625, y: 0.4375}
+      - {x: -0.515625, y: 0.078125}
+      - {x: -0.390625, y: -0.1875}
+      - {x: -0.15625, y: -0.484375}
+      - {x: 0.125, y: -0.78125}
+      - {x: 0.265625, y: -0.78125}
+      - {x: 0.390625, y: -0.671875}
+      - {x: 0.453125, y: -0.359375}
+    - - {x: 0.09375, y: -0.421875}
+      - {x: 0.09375, y: -0.4375}
+      - {x: 0.125, y: -0.46875}
+      - {x: 0.125, y: -0.453125}
+    - - {x: 0.09375, y: 0.046875}
+      - {x: 0.046875, y: 0.140625}
+      - {x: 0.015625, y: 0.171875}
+      - {x: -0.09375, y: 0.21875}
+      - {x: -0.109375, y: 0.21875}
+      - {x: -0.1875, y: 0.296875}
+      - {x: -0.203125, y: 0.296875}
+      - {x: -0.234375, y: 0.328125}
+      - {x: -0.296875, y: 0.328125}
+      - {x: -0.28125, y: 0.34375}
+      - {x: -0.265625, y: 0.34375}
+      - {x: -0.1875, y: 0.265625}
+      - {x: -0.171875, y: 0.265625}
+      - {x: -0.140625, y: 0.234375}
+      - {x: -0.125, y: 0.234375}
+      - {x: -0.109375, y: 0.203125}
+      - {x: -0.046875, y: 0.171875}
+      - {x: 0.0625, y: 0.078125}
+      - {x: 0.0625, y: 0.0625}
+      - {x: 0.125, y: 0.015625}
+      - {x: 0.109375, y: 0.046875}
   m_UseDelaunayMesh: 0
 --- !u!212 &719594989
 SpriteRenderer:
@@ -14815,7 +14812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolArray:
-  - poolSize: 100
+  - poolSize: 50
     prefab: {fileID: 8398040468750061029, guid: fd827ede9a22b6d46b18d2bf971b0e17, type: 3}
     componentType: SoundEffect
 --- !u!1 &1204165601
@@ -21196,11 +21193,11 @@ MonoBehaviour:
   - Something is approaching...
   portrait:
   - {fileID: 21300000, guid: 1300e1d830c998d439c3971fc5d71bf2, type: 3}
-  cinematicBar: {fileID: 0}
+  cinematicBar: {fileID: 1756730706}
   cinematicBarSize: 300
   transitionTime: 0.3
   player: {fileID: 488537282}
-  environmentObject: {fileID: 0}
+  environmentObject: {fileID: 231497383}
   virtualCamera: {fileID: 815851207}
   cutsceneTarget: {fileID: 488537275}
   zoomInOrthographicSize: 2.5
@@ -21572,6 +21569,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 153810004b700db46baff54285a71607, type: 3}
+--- !u!114 &1756730706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5139629720407111422, guid: 1c81fbfcc8c9ec340a239315d308c8a6, type: 3}
+  m_PrefabInstance: {fileID: 488537274}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987617fe64e46e3479dc7f96f8c3ee8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1775868229
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -110,7 +110,14 @@ public class GameManager : MonoBehaviour
 
     private void StartNewGame()
     {
-        gameplaySO = Instantiate(defaultStatSO);
+        if (progressSO != null)
+        {
+            gameplaySO = Instantiate(progressSO);
+        }
+        else
+        {
+            gameplaySO = Instantiate(defaultStatSO);
+        }
         gameplaySO.currentHP = gameplaySO.maxHP;
         currentLevel = 3; // Start at Level 1
         StartCoroutine(PlayWithTransition(currentLevel));
@@ -119,6 +126,7 @@ public class GameManager : MonoBehaviour
     private void HandleGameLose()
     {
         SaveProgress();
+        DataHolder.items.Clear();  // Clear the item list
         StartCoroutine(PlayWithTransition("GameOver"));
     }
 

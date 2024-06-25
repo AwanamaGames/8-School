@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92732873c385dd647b51c2e2b9c1d763, type: 3}
   m_Name: defaultStat
   m_EditorClassIdentifier: 
-  maxHP: 110
-  currentHP: 110
+  maxHP: 300
+  currentHP: 300
   att: 50
   movSpd: 4
   attSpd: 1
-  def: 70
+  def: 40
   isAgro: 0
   leaf: 0

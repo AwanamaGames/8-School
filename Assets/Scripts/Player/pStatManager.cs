@@ -10,8 +10,15 @@ public class pStatManager : MonoBehaviour
     public StatSO stat;
     public LeafCounter LeafCounter;
 
-    public List<ItemList> items = new List<ItemList>();
-    private List<ItemList> storedItems = new List<ItemList>();
+    //public List<ItemList> items = new List<ItemList>();
+    //private List<ItemList> storedItems = new List<ItemList>();
+
+    public List<ItemList> items
+    {
+        get { return DataHolder.items; }
+        set { DataHolder.items = value; }
+    }
+
     public bool isDoubleLeafActive = false;
 
     private void Awake()
@@ -79,11 +86,6 @@ public class pStatManager : MonoBehaviour
             i.item.OnDash(this, i.stacks);
         }
     }
-
-    //public void RemoveItem(Item item)
-    //{
-    //    items.RemoveAll(i => i.item == item);
-    //}
 
     #region For InventoryUI
     public event Action InventoryChanged; // Event to notify inventory changes

@@ -39,7 +39,7 @@ public class ObatMerah : Item
     {   
         if (stat.stat.currentHP < stat.stat.maxHP)
         {
-            stat.stat.currentHP += 2 * stacks; 
+            stat.stat.currentHP += 3 * stacks; 
         }
     }
 }
@@ -97,12 +97,11 @@ public class MovSpeedDuration : Item
 {
     private bool isBoostActive = false;
     private int originalSpeed;
-    private int extraSpeed = 15; 
-    private float duration = 5f;  // Duration for the effect to last
+    private int extraSpeed = 5;
 
     public override string GiveName()
     {
-        return "MovSpeedDuration";
+        return "Speatu Angin";
     }
 
     public override void Update(pStatManager stat, int stacks)
@@ -119,25 +118,25 @@ public class MovSpeedDuration : Item
         originalSpeed = stat.stat.movSpd;
         stat.stat.movSpd =+ extraSpeed; // Boost the move speed
 
-        yield return new WaitForSeconds(duration);
+        yield return null;
 
-        stat.stat.movSpd = originalSpeed; // turn it back to the original move speed
-        isBoostActive = false;
+        //stat.stat.movSpd = originalSpeed; // turn it back to the original move speed
+        //isBoostActive = false;
 
-        // Remove the item from the list
-        stat.RemoveItem(item);
+        //// Remove the item from the list
+        //stat.RemoveItem(item);
     }
 }
 
 
 public class IncreaseDef : Item
 {
-    private int extraDef = 5; // 
+    private int extraDef = 20; // 
     private bool defIncreased = false;
     private int currentDef;
     public override string GiveName()
     {
-        return "IncreaseDef";
+        return "Jubah Hitam";
     }
     public override void Update(pStatManager stat, int stacks)
     {
@@ -171,7 +170,7 @@ public class DoubleLeaf : Item
 
     public override string GiveName()
     {
-        return "DoubleLeaf";
+        return "Tangan Pengganda";
     }
 
     public override void Update(pStatManager stat, int stacks)
@@ -187,13 +186,13 @@ public class DoubleLeaf : Item
         isEffectActive = true;
         stat.isDoubleLeafActive = true; // Activate the double leaf effect
 
-        yield return new WaitForSeconds(duration);
+        yield return null;
 
-        stat.isDoubleLeafActive = false; // Deactivate the double leaf effect
-        isEffectActive = false;
+        //stat.isDoubleLeafActive = false; // Deactivate the double leaf effect
+        //isEffectActive = false;
 
-        // Remove the item from the list
-        stat.RemoveItem(this);
+        //// Remove the item from the list
+        //stat.RemoveItem(this);
     }
 }
 #endregion
